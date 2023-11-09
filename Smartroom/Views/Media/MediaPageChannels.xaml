@@ -1,0 +1,2435 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    x:Class="Smartroom.Views.MediaPageChannels">
+    <ContentView.Content>
+        <f9p:Frame
+            AutomationProperties.IsInAccessibleTree="False"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="2"
+            BorderWidth="2"
+            BorderRadius="45"
+            BorderColor="LightGray"
+            BackgroundColor="#f8f8f8"
+            HasShadow="false"                
+            x:Name="ChannelListFrame">
+
+            <Grid
+                AutomationProperties.IsInAccessibleTree="False"
+                ColumnSpacing="0"
+                RowSpacing="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                x:Name="ChannelListGrid">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>                                       
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "17*"/>
+                    <RowDefinition Height = "19*"/>
+                    <RowDefinition Height = "20*"/>
+                    <RowDefinition Height = "19*"/>
+                    <RowDefinition Height = "25*"/>
+                </Grid.RowDefinitions>
+
+                <Image
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.RowSpan="5"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Aspect="Fill"
+                    Source="{Utilities:ImageResource Smartroom.Icons.MediaNumberPadBackground.png}"/>
+
+                <Utilities:SidebarLabel
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="Channel List"
+                    FontSize="30"
+                    FontFamily="SofiaProRegular"
+                    CharacterSpacing="0.50"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="ListLabel"/>
+
+                <ScrollView
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Grid.RowSpan="3"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    x:Name="ChannelScroll">
+
+                    <Grid
+                        ColumnSpacing="0"
+                        RowSpacing="0">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="09*"/>
+                            <ColumnDefinition Width="91*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="37"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+
+                        <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="3"
+                                FontSize="30"
+                                x:Name="Channel27Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="27">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                        <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="3"
+                                FontSize="30"
+                                Padding="9,0,0,0"
+                                x:Name="Channel27"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="NBC">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+
+                            </Utilities:SidebarLabel>
+
+                          <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="4"
+                                FontSize="30"
+                                x:Name="Channel28Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="28">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                                
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="4"
+                                FontSize="30"
+                                Padding="9,0,0,0"
+                                x:Name="Channel28"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="ABC">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="5"
+                                FontSize="30"
+                                x:Name="Channel29Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="29">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                                
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="5"
+                                FontSize="30"
+                                Padding="9,0,0,0"
+                                x:Name="Channel29"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="CBS">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                             <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="6"
+                                FontSize="30"
+                                x:Name="Channel30Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="30">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="6"
+                                FontSize="30"
+                                Padding="9,0,0,0"
+                                x:Name="Channel30"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="Fox">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+
+                          <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="7"
+                                FontSize="30"
+                                x:Name="Channel31Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="31">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="7"
+                                FontSize="30"
+                                x:Name="Channel31"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="CW">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="8"
+                                FontSize="30"
+                                x:Name="Channel32Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="32">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="8"
+                                FontSize="30"
+                                x:Name="Channel32"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="PBS">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="9"
+                                FontSize="30"
+                                x:Name="Channel33Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="33">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="9"
+                                FontSize="30"
+                                x:Name="Channel33"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                Padding="9,0,0,0"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="KJZZ">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="10"
+                                FontSize="30"
+                                x:Name="Channel34Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="34">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="10"
+                                FontSize="30"
+                                x:Name="Channel34"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                Padding="9,0,0,0"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="BYU">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="11"
+                                FontSize="30"
+                                x:Name="Channel35Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="35">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="11"
+                                FontSize="30"
+                                x:Name="Channel35"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="Univision">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="12"
+                                FontSize="30"
+                                x:Name="Channel36Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="36">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="12"
+                                FontSize="30"
+                                x:Name="Channel36"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+        
+                                Text="ION">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="13"
+                                FontSize="30"
+                                x:Name="Channel37Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="37">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="13"
+                                FontSize="30"
+                                x:Name="Channel37"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+
+                                Text="Telemundo (sin sinido)">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="14"
+                                FontSize="30"
+                                x:Name="Channel38Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="38">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="14"
+                                FontSize="30"
+                                x:Name="Channel38"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="Telemundo">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="15"
+                                FontSize="30"
+                                x:Name="Channel39Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="39">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="15"
+                                FontSize="30"
+                                x:Name="Channel39"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+
+                                Text="KUEN">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="16"
+                                FontSize="30"
+                                x:Name="Channel40Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="40">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="16"
+                                FontSize="30"
+                                x:Name="Channel40"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Text="Park City TV">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="17"
+                                FontSize="30"
+                                x:Name="Channel41Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="41">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="17"
+                                FontSize="30"
+                                x:Name="Channel41"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                Padding="9,0,0,0"                
+                                Text="Azteca America">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="18"
+                                FontSize="30"
+                                x:Name="Channel42Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="42">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="18"
+                                FontSize="30"
+                                Padding="9,0,0,0"
+                                x:Name="Channel42"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+  
+                                Text="Multimedios">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="19"
+                                FontSize="30"
+                                x:Name="Channel43Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="43">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="19"
+                                FontSize="30"
+                                x:Name="Channel43"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+          
+                                Text="KCSG TV">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="20"
+                                FontSize="30"
+                                x:Name="Channel44Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="44">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="20"
+                                FontSize="30"
+                                x:Name="Channel44"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+        
+                                Text="KMYU">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="21"
+                                FontSize="30"
+                                x:Name="Channel45Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="45">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="21"
+                                FontSize="30"
+                                x:Name="Channel45"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+            
+                                Text="Altitude">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="22"
+                                FontSize="30"
+                                x:Name="Channel46Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="46">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="22"
+                                FontSize="30"
+                                x:Name="Channel46"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+            
+                                Text="Roots Sports">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="23"
+                                FontSize="30"
+                                x:Name="Channel47Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="47">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="23"
+                                FontSize="30"
+                                x:Name="Channel47"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+       
+                                Text="PAC 12 Sports">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="24"
+                                FontSize="30"
+                                x:Name="Channel48Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="48">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="24"
+                                FontSize="30"
+                                x:Name="Channel48"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+              
+                                Text="ESPN">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="25"
+                                FontSize="30"
+                                x:Name="Channel49Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="49">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="25"
+                                FontSize="30"
+                                x:Name="Channel49"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                
+                                Text="ESPN 2">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="26"
+                                FontSize="30"
+                                x:Name="Channel50Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="50">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="26"
+                                FontSize="30"
+                                x:Name="Channel50"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+           
+                                Text="Golf Channel">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="27"
+                                FontSize="30"
+                                x:Name="Channel51Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="51">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="27"
+                                FontSize="30"
+                                x:Name="Channel51"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                  
+                                Text="Fox News">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="28"
+                                FontSize="30"
+                                x:Name="Channel52Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="52">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="28"
+                                FontSize="30"
+                                x:Name="Channel52"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+              
+                                Text="CNN">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="29"
+                                FontSize="30"
+                                x:Name="Channel53Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="53">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="29"
+                                FontSize="30"
+                                x:Name="Channel53"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+              
+                                Text="Headline News">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="30"
+                                FontSize="30"
+                                x:Name="Channel54Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="54">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="30"
+                                FontSize="30"
+                                x:Name="Channel54"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                 
+                                Text="MSNBC">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="31"
+                                FontSize="30"
+                                x:Name="Channel55Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="55">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="31"
+                                FontSize="30"
+                                x:Name="Channel55"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+          
+                                Text="CNBC">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="32"
+                                FontSize="30"
+                                x:Name="Channel56Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="56">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="32"
+                                FontSize="30"
+                                x:Name="Channel56"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+        
+                                Text="The Weather Channel">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="33"
+                                FontSize="30"
+                                x:Name="Channel57Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="57">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="33"
+                                FontSize="30"
+                                x:Name="Channel57"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+       
+                                Text="USA Network">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="34"
+                                FontSize="30"
+                                x:Name="Channel58Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="58">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="34"
+                                FontSize="30"
+                                x:Name="Channel58"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+     
+                                Text="TNT">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="35"
+                                FontSize="30"
+                                x:Name="Channel59Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="59">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="35"
+                                FontSize="30"
+                                x:Name="Channel59"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+      
+                                Text="TBS">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="36"
+                                FontSize="30"
+                                x:Name="Channel60Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="60">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="36"
+                                FontSize="30"
+                                x:Name="Channel60"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="A&amp;E">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="37"
+                                FontSize="30"
+                                x:Name="Channel61Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="61">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="37"
+                                FontSize="30"
+                                x:Name="Channel61"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+      
+                                Text="HGTV">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="38"
+                                FontSize="30"
+                                x:Name="Channel62Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="62">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="38"
+                                FontSize="30"
+                                x:Name="Channel62"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+             
+                                Text="Food Network">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="39"
+                                FontSize="30"
+                                x:Name="Channel63Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="63">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="39"
+                                FontSize="30"
+                                x:Name="Channel63"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                
+                                Text="Lifetime">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="40"
+                                FontSize="30"
+                                x:Name="Channel64Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="64">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="40"
+                                FontSize="30"
+                                x:Name="Channel64"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+         
+                                Text="MTV">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="41"
+                                FontSize="30"
+                                x:Name="Channel65Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="65">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="41"
+                                FontSize="30"
+                                x:Name="Channel65"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                  
+                                Text="TLC">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="42"
+                                FontSize="30"
+                                x:Name="Channel66Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="66">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="42"
+                                FontSize="30"
+                                x:Name="Channel66"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                      
+                                Text="Disney Channel">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="43"
+                                FontSize="30"
+                                x:Name="Channel67Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="67">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="43"
+                                FontSize="30"
+                                x:Name="Channel67"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+          
+                                Text="Nickelodeon">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="44"
+                                FontSize="30"
+                                x:Name="Channel68Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="68">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                             <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="44"
+                                FontSize="30"
+                                x:Name="Channel68"
+                                 Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+         
+                                Text="Freeform">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                                 </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="45"
+                                FontSize="30"
+                                x:Name="Channel69Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="69">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="45"
+                                FontSize="30"
+                                x:Name="Channel69"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+
+                                Text="Discovery Channel">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="46"
+                                FontSize="30"
+                                x:Name="Channel70Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="70">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="46"
+                                FontSize="30"
+                                x:Name="Channel70"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+           
+                                Text="Travel Channel">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="47"
+                                FontSize="30"
+                                x:Name="Channel71Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="71">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="47"
+                                FontSize="30"
+                                x:Name="Channel71"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                 
+                                Text="FX">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="48"
+                                FontSize="30"
+                                x:Name="Channel72Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="72">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="48"
+                                FontSize="30"
+                                x:Name="Channel72"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+       
+                                Text="BBC America">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="49"
+                                FontSize="30"
+                                x:Name="Channel73Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="73">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="49"
+                                FontSize="30"
+                                x:Name="Channel73"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+        
+                                Text="ESPN News">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="50"
+                                FontSize="30"
+                                x:Name="Channel74Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="74">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="50"
+                                FontSize="30"
+                                x:Name="Channel74"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                   
+                                Text="History Channel">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="51"
+                                FontSize="30"
+                                x:Name="Channel75Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="75">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="51"
+                                FontSize="30"
+                                x:Name="Channel75"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                      
+                                Text="Syfy">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="52"
+                                FontSize="30"
+                                x:Name="Channel76Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="76">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="52"
+                                FontSize="30"
+                                x:Name="Channel76"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+               
+                                Text="National Geographic">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="53"
+                                FontSize="30"
+                                x:Name="Channel77Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="77">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="53"
+                                FontSize="30"
+                                x:Name="Channel77"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                
+                                Text="CBS Sports">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="54"
+                                FontSize="30"
+                                x:Name="Channel78Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="78">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="54"
+                                FontSize="30"
+                                x:Name="Channel78"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                      
+                                Text="VH1">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="55"
+                                FontSize="30"
+                                x:Name="Channel79Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="79">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="55"
+                                FontSize="30"
+                                x:Name="Channel79"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                  
+                                Text="Spike">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="56"
+                                FontSize="30"
+                                x:Name="Channel80Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="80">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="56"
+                                FontSize="30"
+                                x:Name="Channel80"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                            
+                                Text="Comedy Central">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="57"
+                                FontSize="30"
+                                x:Name="Channel81Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="81">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="57"
+                                FontSize="30"
+                                x:Name="Channel81"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                       
+                                Text="Animal Planet">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="58"
+                                FontSize="30"
+                                x:Name="Channel82Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="82">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="58"
+                                FontSize="30"
+                                x:Name="Channel82"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                      
+                                Text="Bravo">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="59"
+                                FontSize="30"
+                                x:Name="Channel83Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="83">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="59"
+                                FontSize="30"
+                                x:Name="Channel83"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+            
+                                Text="NFL Network">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="60"
+                                FontSize="30"
+                                x:Name="Channel84Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="84">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="60"
+                                FontSize="30"
+                                x:Name="Channel84"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                    
+                                Text="NCB Sports">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="61"
+                                FontSize="30"
+                                x:Name="Channel85Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="85">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="61"
+                                FontSize="30"
+                                x:Name="Channel85"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+              
+                                Text="ESPN U">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="0"
+                                Grid.Row="62"
+                                FontSize="30"
+                                x:Name="Channel86Num"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                TabIndex="11"
+                                Text="86">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+                            <Utilities:SidebarLabel
+                                Grid.Column="1"
+                                Grid.Row="62"
+                                FontSize="30"
+                                x:Name="Channel86"
+                                Padding="9,0,0,0"
+                                FontFamily="SofiaProRegular"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                     
+                                Text="FOXB">
+
+                                <Utilities:SidebarLabel.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ChannelTapped"/>
+                                </Utilities:SidebarLabel.GestureRecognizers>
+                            </Utilities:SidebarLabel>
+
+                     </Grid>
+                </ScrollView>
+
+                <Utilities:ScrollFade
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    InputTransparent="True"
+                    Direction = "Top"/>
+
+                <Utilities:ScrollFade
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    InputTransparent="True"
+                    Direction = "Bottom"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="NumberPadButton"
+                    AutomationId="Number Pad"
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="ShowNumberPad"
+                    x:Name="NumberPadButton">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaIconNumpad.svg"/>
+                </f9p:StateButton>
+
+                <ffimageloadingsvg:SvgCachedImage
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    WidthRequest="100"
+                    Source="resource://Smartroom.Resources.MediaIconChannelListRed.svg"
+                    x:Name="ChannelListIcon"/>         
+
+            </Grid>
+        </f9p:Frame>
+    </ContentView.Content>
+</ContentView>

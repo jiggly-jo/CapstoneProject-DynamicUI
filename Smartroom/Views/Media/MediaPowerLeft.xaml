@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    x:Class="Smartroom.Views.MediaPowerLeft">
+    <ContentView.Content>
+        <f9p:Frame
+            AutomationProperties.IsInAccessibleTree="False"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="0"
+            BorderWidth="2"
+            BorderRadius="50"
+            BorderColor="LightGray"
+            BackgroundColor="#f8f8f8"
+            HasShadow="false"
+            x:Name="ChannelFrame">
+
+            <f9p:StateButton
+                        x:Name="PowerButton"                        
+                        AutomationProperties.Name="Pair"
+                        AutomationId="PowerButton"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Command="{Binding TVOnOffCommand}"
+                        AutomationProperties.IsInAccessibleTree="True">
+
+                        <ffimageloadingsvg:SvgCachedImage
+                                    WidthRequest="100"
+                                    HeightRequest="100"
+                                    Source="resource://Smartroom.Resources.MediaPowerButton.svg"/>
+                    </f9p:StateButton>
+
+            </f9p:Frame>
+    </ContentView.Content>
+</ContentView>

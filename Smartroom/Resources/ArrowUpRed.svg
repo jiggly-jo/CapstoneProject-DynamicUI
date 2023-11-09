@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 195.74 107.63">
+<metadata>
+<vectornator:setting key="DimensionsVisible" value="1"/>
+<vectornator:setting key="PencilOnly" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="OutlineMode" value="0"/>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="doHistoryDisabled" value="0"/>
+<vectornator:setting key="TimeLapseWatermarkDisabled" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+<vectornator:setting key="Units" value="Points"/>
+<vectornator:setting key="IsolateActiveLayer" value="0"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+</metadata>
+<defs/>
+<g id="Layer 2" vectornator:layerName="Layer 2">
+<path d="M98.57+13L59.57+53.6C43.7633+70.0667+27.96+86.5333+12.16+103C7.47+107.88+4.41+108.8+1.63+106.26C-1.15+103.72-0.37+100.2+4.42+95.26C33.8333+64.6067+63.24+33.9633+92.64+3.33C96.87-1.07+99.8-1.11+103.96+3.22C133.6+34.08+163.233+64.9533+192.86+95.84C193.78+96.84+195.23+97.75+195.37+98.84C195.68+101.23+196.2+104.61+194.93+105.84C193.66+107.07+190.21+106.61+187.93+106C186.39+105.57+185.22+103.65+183.93+102.33C156.843+74.1433+129.75+45.9367+102.65+17.71C101.39+16.4+100.25+15+98.57+13Z" opacity="1" fill="#ac162c"/>
+</g>
+</svg>

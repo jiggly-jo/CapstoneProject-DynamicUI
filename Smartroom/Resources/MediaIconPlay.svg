@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="279" height="279" viewBox="0 0 279 279">
+  <g id="MediaIconPlay" transform="translate(-922 -388)">
+    <g id="Page-1" transform="translate(921.1 387.84)">
+      <g id="Group" transform="translate(3.9 3.16)">
+        <g id="ArrowButtonBase" transform="translate(0 0)">
+          <circle id="Oval" cx="136.5" cy="136.5" r="136.5" fill="#fff"/>
+          <circle id="Oval-2" data-name="Oval" cx="136.5" cy="136.5" r="136.5" fill="none" stroke="#dcddde" stroke-width="6"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_222" data-name="Group 222" transform="translate(2 -658)">
+      <path id="Polygon_3" data-name="Polygon 3" d="M43.211,3.578a2,2,0,0,1,3.578,0L88.553,87.106A2,2,0,0,1,86.764,90H3.236a2,2,0,0,1-1.789-2.894Z" transform="translate(1083 1140) rotate(90)" fill="#ae1d32"/>
+      <path id="Path_1449" data-name="Path 1449" d="M0,0H80" transform="translate(1101.5 1225.604) rotate(-90)" fill="none" stroke="#ac162c" stroke-linecap="round" stroke-width="10"/>
+      <path id="Path_1450" data-name="Path 1450" d="M0,0H80" transform="translate(1125.5 1225.604) rotate(-90)" fill="none" stroke="#ac162c" stroke-linecap="round" stroke-width="10"/>
+    </g>
+  </g>
+</svg>

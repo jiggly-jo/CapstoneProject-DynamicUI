@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Smartroom.Views.SidebarItem"
+             xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+             xmlns:Constants="clr-namespace:Smartroom.Helpers">
+
+    <StackLayout x:Name="StackRow" Orientation="Horizontal" WidthRequest="700" Margin="10,0,0,0">
+        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+        </StackLayout.GestureRecognizers>
+
+        <Frame BackgroundColor="Transparent"  HasShadow="False" Grid.Column="0" HorizontalOptions="FillAndExpand" Margin="15,0,15,0">
+            <StackLayout Orientation="Horizontal">
+                <Image WidthRequest="45" Source="{Binding DeSelectedIcon}" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Image.Triggers>
+                        <DataTrigger TargetType="Image" Binding="{Binding IsSelected}" Value="true">
+                            <Setter Property="Source" Value="{Binding SelectedIcon}" />
+                        </DataTrigger>
+                    </Image.Triggers>
+                </Image>
+                <Utilities:SidebarLabel x:Name="Label" Text="{Binding Text}" TextColor="White" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand">
+                    <Utilities:SidebarLabel.Triggers>
+                        <DataTrigger TargetType="Utilities:SidebarLabel" Binding="{Binding IsSelected}" Value="true">
+                            <Setter Property="TextColor" Value="{x:Static Constants:Constants.UofURed}" />
+                        </DataTrigger>
+                    </Utilities:SidebarLabel.Triggers>
+                </Utilities:SidebarLabel>
+            </StackLayout>
+            <Frame.Triggers>
+                <DataTrigger TargetType="Frame" Binding="{Binding IsSelected}" Value="true">
+                    <Setter Property="BackgroundColor" Value="White" />
+                </DataTrigger>
+            </Frame.Triggers>
+        </Frame>
+
+        <Image HorizontalOptions="End" Grid.Column="2" Margin="0,0,-18,0" BackgroundColor="Transparent"
+               IsVisible="{Binding IsSelected}"
+               Source="{Utilities:ImageResource Smartroom.Icons.SideBarIconSelectedTriangle.png}" />
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="173" height="164" viewBox="0 0 173 164">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="173" height="164" fill="none"/>
+    </clipPath>
+    <filter id="Ellipse_20" x="-18" y="-12" width="68" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_44" x="30" y="-12" width="138" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_20-2" x="-18" y="51" width="68" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_44-2" x="30" y="51" width="138" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_20-3" x="-18" y="114" width="68" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_44-3" x="30" y="114" width="138" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="MediaIconChannelList" clip-path="url(#clip-path)">
+    <g transform="translate(-2101 -1481)">
+      <g transform="matrix(1, 0, 0, 1, 2101, 1481)" filter="url(#Ellipse_20)">
+        <circle id="Ellipse_20-4" data-name="Ellipse 20" cx="16" cy="16" r="16" fill="#ae1d32"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 2101, 1481)" filter="url(#Rectangle_44)">
+        <rect id="Rectangle_44-4" data-name="Rectangle 44" width="102" height="32" rx="16" transform="translate(48)" fill="#ae1d32"/>
+      </g>
+    </g>
+    <g transform="translate(-2101 -1418)">
+      <g transform="matrix(1, 0, 0, 1, 2101, 1418)" filter="url(#Ellipse_20-2)">
+        <circle id="Ellipse_20-5" data-name="Ellipse 20" cx="16" cy="16" r="16" transform="translate(0 63)" fill="#ae1d32"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 2101, 1418)" filter="url(#Rectangle_44-2)">
+        <rect id="Rectangle_44-5" data-name="Rectangle 44" width="102" height="32" rx="16" transform="translate(48 63)" fill="#ae1d32"/>
+      </g>
+    </g>
+    <g transform="translate(-2101 -1355)">
+      <g transform="matrix(1, 0, 0, 1, 2101, 1355)" filter="url(#Ellipse_20-3)">
+        <circle id="Ellipse_20-6" data-name="Ellipse 20" cx="16" cy="16" r="16" transform="translate(0 126)" fill="#ae1d32"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 2101, 1355)" filter="url(#Rectangle_44-3)">
+        <rect id="Rectangle_44-6" data-name="Rectangle 44" width="102" height="32" rx="16" transform="translate(48 126)" fill="#ae1d32"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    x:Class="Smartroom.Views.MediaAppleLeft">
+    <ContentView.Content>
+        <Grid
+            ColumnSpacing="0"
+            RowSpacing="0"            
+            x:Name="AppleLeftGrid">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="33*"/>
+                <RowDefinition Height="33*"/>
+                <RowDefinition Height="33*"/>
+            </Grid.RowDefinitions>
+
+            <f9p:Frame
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Padding="0"
+                BorderWidth="2"
+                BorderRadius="50"
+                BorderColor="LightGray"
+                BackgroundColor="#f8f8f8"
+                HasShadow="false"
+                x:Name="PowerFrame">
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Power"
+                    AutomationId="Power Button"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Command="{Binding TVOnOffCommand}"
+                    x:Name="PowerButton">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaPowerButton.svg"/>
+
+                </f9p:StateButton>
+            </f9p:Frame>
+
+            <f9p:Frame
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Padding="0"
+                BorderWidth="2"
+                BorderRadius="50"
+                BorderColor="LightGray"
+                BackgroundColor="#f8f8f8"
+                HasShadow="false"
+                x:Name="MenuFrame">
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Power"
+                    AutomationId="Power Button"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Command="{Binding AppleMenuCommand}"                       
+                    x:Name="MenuButton">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaIconMenu.svg"/>
+
+                </f9p:StateButton>
+            </f9p:Frame>
+
+            <f9p:Frame
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Column="0"
+                Grid.Row="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Padding="0"
+                BorderWidth="2"
+                BorderRadius="50"
+                BorderColor="LightGray"
+                BackgroundColor="#f8f8f8"
+                HasShadow="false"
+                x:Name="PlayPauseFrame">
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Power"
+                    AutomationId="Power Button"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Command="{Binding ApplePlayCommand}"
+                    x:Name="PlayPauseButton">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaIconPlay.svg"/>
+
+                </f9p:StateButton>
+            </f9p:Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

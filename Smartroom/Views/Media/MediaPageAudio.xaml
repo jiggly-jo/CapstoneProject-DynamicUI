@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Smartroom.Views.MediaPageAudio"
+    xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+    <ContentView.Content>
+
+        <Frame
+                Margin="10,0,10,0"
+                Grid.Column="0"
+                Grid.Row="2"
+                BackgroundColor="#f8f8f8"
+                CornerRadius="30"
+                HasShadow="False"
+                BorderColor="Gray"
+                x:Name="RoomFrame"
+                Padding="20"
+                AutomationProperties.IsInAccessibleTree="False"
+                OutlineColor="LightGray"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+            <ScrollView>
+                <StackLayout
+                Orientation="Vertical"
+                Spacing="10"
+                Padding="10,0,10,0"
+                VerticalOptions="CenterAndExpand">
+
+                    <!--#region Bluetooth pairing info-->
+                    <Utilities:ValueLabel
+                    x:Name="PairingPinLabel"
+                    Text="Soundbar BT Pin:"
+                    LineBreakMode="NoWrap"
+                    HorizontalOptions="Center"
+                    TextColor="{Binding RoomColor}"
+                    AutomationProperties.IsInAccessibleTree="False"/>
+
+                    <Utilities:ValueLabel
+                    LineBreakMode="NoWrap"
+                    x:Name="PairingPinDigitsLabel"
+                    HorizontalOptions="Center"
+                    Text="{Binding SoundBarPin}"
+                    AutomationProperties.IsInAccessibleTree="False"/>
+
+
+
+                    <!--#endregion Bluetooth pairing info-->
+                    <!--#region Pair image button and text-->
+
+
+                    <StackLayout
+                        Margin="5,15,5,5"
+                        Spacing="20"
+                        HorizontalOptions="Center"
+                        Orientation="Horizontal">
+
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="30"
+                            HasShadow="False"
+                            BorderColor="Gray"
+                            Padding="20"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            OutlineColor="LightGray"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            x:Name="BTPairFrame">
+                            <StackLayout
+                                Orientation="Vertical">
+                                <f9p:StateButton
+                                    IsEnabled="False">
+                                    <ffimageloadingsvg:SvgCachedImage
+                                    WidthRequest="50"
+                                    HeightRequest="50"
+                                    Source="resource://Smartroom.Resources.MediaIconBlueToothInput.svg"/>
+                                </f9p:StateButton>
+
+                                <Utilities:SidebarLabel
+                                    AutomationProperties.IsInAccessibleTree="False"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Start Pairing"
+                                    FontSize="Body"
+                                    FontFamily="SofiaProRegular"
+                                    x:Name="PairLabel"/>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PairBluetoothCommand}"/>
+                                <TapGestureRecognizer Tapped="BTPairingTapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <Frame
+                            BackgroundColor="White"
+                            CornerRadius="30"
+                            HasShadow="False"
+                            BorderColor="Gray"
+                            Padding="20"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            OutlineColor="LightGray"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            x:Name="BTSourceFrame">
+
+                            <StackLayout
+                            Orientation="Vertical">
+                                <f9p:StateButton
+                                    IsEnabled="False">
+                                    <ffimageloadingsvg:SvgCachedImage
+                                    WidthRequest="50"
+                                    HeightRequest="50"
+                                    Source="resource://Smartroom.Resources.MediaPowerButton.svg"/>
+                                </f9p:StateButton>
+
+                                <Utilities:SidebarLabel
+                                    AutomationProperties.IsInAccessibleTree="False"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Soundbar BT Mode"
+                                    FontSize="Body"
+                                    FontFamily="SofiaProRegular"
+                                    x:Name="PowerLabel"/>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding BluetoothCommand}"/>
+                                <TapGestureRecognizer Tapped="BTSourceTapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </StackLayout>
+                    <!--#endregion Pair image button and text-->
+
+                    <Label VerticalOptions="CenterAndExpand"
+                       FontSize="Body">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="To listen to music on the soundbar follow these steps:&#10;" FontAttributes="Bold"/>
+                                <Span Text="-Press Soundbar BT Mode power button.&#10;"/>
+                                <Span Text="-If not already paired, press the 'Start Pairing' button.&#10;"/>
+                                <Span Text="-Go to Bluetooth settings on the device you want to listen from.&#10;"/>
+                                <Span Text="-Select the SB-1900 device and type in the PIN you see above when requested.&#10;"/>
+                                <Span Text="-You should pair within a few seconds (if not, repeat process or request help)&#10;&#10;"/>
+                                <Span Text="Helpful Tips:&#10;" FontAttributes="Bold"/>
+                                <Span Text="-You can change the soundbar volume with the device's volume buttons or here in the app to the right.&#10;"/>
+                                <Span Text="-If listening to music on this device you will need to close the app in order to listen to music, as music will not play from this device while the app is open.&#10;"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

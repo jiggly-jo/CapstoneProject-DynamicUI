@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Smartroom.App"
+             xmlns:local="clr-namespace:Smartroom;assembly=Smartroom">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="SofiaProSemiBoldFont">
+                <On Platform="iOS" Value="SofiaPro-SemiBold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="SofiaProRegularFont">
+                <On Platform="iOS" Value="SofiaPro-Regular" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="279" height="279" viewBox="0 0 279 279">
+  <g id="MediaIconMenu" transform="translate(-922 -388)">
+    <g id="Page-1" transform="translate(921.1 387.84)">
+      <g id="Group" transform="translate(3.9 3.16)">
+        <g id="ArrowButtonBase" transform="translate(0 0)">
+          <circle id="Oval" cx="136.5" cy="136.5" r="136.5" fill="#fff"/>
+          <circle id="Oval-2" data-name="Oval" cx="136.5" cy="136.5" r="136.5" fill="none" stroke="#dcddde" stroke-width="6"/>
+        </g>
+      </g>
+    </g>
+    <text id="MENU" transform="translate(1062 559)" fill="#ae1d32" font-size="80" font-family="SofiaPro-Regular, Sofia Pro" letter-spacing="0.012em"><tspan x="-116.08" y="0">MENU</tspan></text>
+  </g>
+</svg>

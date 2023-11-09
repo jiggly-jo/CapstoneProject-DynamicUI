@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Name="BlindsContentView"
+             x:Class="Smartroom.Views.BlindsPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Utilities="clr-namespace:Smartroom.Utilities">
+
+    <ContentView.Content>
+        <Grid
+            AutomationProperties.IsInAccessibleTree="False"
+            ColumnSpacing="0"
+            RowSpacing="0"
+            x:Name="BlindsGrid"
+            x:FieldModifier="public"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="85*"/>
+            </Grid.RowDefinitions>
+
+            <Utilities:HeadlineLabel
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="BLIND CONTROLS"
+                BackgroundColor="White"
+                VerticalTextAlignment="End"
+                x:Name="BlindsLabel"                
+                x:FieldModifier="public"/>
+
+            <Frame
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Column="0"
+                Grid.Row="1"
+                CornerRadius="50"
+                HasShadow="False"
+                Padding="0"
+                x:FieldModifier="public"
+                x:Name="ControlFrame"
+                BorderColor="DarkGray"
+                BackgroundColor="#f8f8f8"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                <Grid
+                    Padding="0"
+                    Margin="0"
+                    x:Name="ControlGrid"
+                    x:FieldModifier="Public"
+                    AutomationProperties.IsInAccessibleTree="False"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="550*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="450*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="33*"/>
+                        <RowDefinition Height="33*"/>
+                        <RowDefinition Height="33*"/>
+                    </Grid.RowDefinitions>
+
+                    <Utilities:Stage3FrameHoriz
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        Grid.RowSpan="3"
+                        Percent=".55"
+                        CornerRadius="100"/>
+
+                    <Utilities:Sublabel
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Margin="0,0,0,0"
+                        VerticalTextAlignment="End"
+                        Text="Blackout Blinds"
+                        x:Name="BlackoutLabel"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        TabIndex="11"
+                        Margin="0,40,0,45"
+                        Clicked="BlindsModeSelect"
+                        x:Name="BlackoutModeSelect"
+                        AutomationProperties.Name="Blackout Blinds"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Source="{Utilities:ImageResource Smartroom.Icons.BlindBlackout.png}"/>
+
+                    <Utilities:Sublabel
+                        AutomationProperties.IsInAccessibleTree="false"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="0,0,0,10"
+                         VerticalTextAlignment="End"
+                        Text="Sheer Blinds"
+                        x:Name="SheerLabel"/>
+
+                    <ImageButton
+                        AutomationProperties.IsInAccessibleTree="true"
+                        TabIndex="12"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="0,30,0,55"
+                        Clicked="BlindsModeSelect"
+                        x:Name="SheerModeSelect"
+                        AutomationProperties.Name="Sheer Blinds"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Source="{Utilities:ImageResource Smartroom.Icons.BlindSheer.png}"/>
+
+                    <Utilities:Sublabel
+                        AutomationProperties.IsInAccessibleTree="false"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="End"
+                        Margin="0,0,0,3"
+                        Text="All Blinds"
+                        x:Name="AllLabel"
+                        TextColor="#AC162C"/>
+
+                    <ImageButton
+                        AutomationProperties.IsInAccessibleTree="true"
+                        TabIndex="13"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Clicked="BlindsModeSelect"
+                        Padding="0"
+                        Margin="0,20,0,30"
+                        x:Name="AllModeSelect"
+                        AutomationProperties.Name="All Blinds"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Source="{Utilities:ImageResource Smartroom.Icons.BlindAllRed.png}"/>
+
+                    <Grid
+                        AutomationProperties.IsInAccessibleTree="false"
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Grid.RowSpan="3"
+                            ColumnSpacing="0"
+                            RowSpacing="0">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="23*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="27*"/>
+                            <RowDefinition Height="23*"/>
+                        </Grid.RowDefinitions>
+
+                        <ImageButton
+                            AutomationProperties.IsInAccessibleTree="true"
+                            TabIndex="14"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Clicked="BlindsOpen"
+                                x:Name="BlindsOpenButton"
+                                AutomationProperties.Name="Open Blinds"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUpFull.png}"/>
+
+                        <ImageButton
+                            AutomationProperties.IsInAccessibleTree="true"
+                            TabIndex="15"
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                Clicked="BlindsUp"
+                                x:Name="BlindsUpButton"
+                                AutomationProperties.Name="Blinds Up"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUp.png}"/>
+
+                        <ImageButton
+                            AutomationProperties.IsInAccessibleTree="true"
+                        TabIndex="16"
+                                Grid.Column="0"
+                                Grid.Row="2"
+                                Clicked="BlindsDown"
+                                x:Name="BlindsDownButton"
+                                AutomationProperties.Name="Blinds Down"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDown.png}"/>
+
+                        <ImageButton
+                            AutomationProperties.IsInAccessibleTree="true"
+                            TabIndex="17"
+                                Grid.Column="0"
+                                Grid.Row="3"
+                                Clicked="BlindsClose"
+                                x:Name="BlindsCloseButton"
+                                AutomationProperties.Name="Close Blinds"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDownFull.png}"/>
+
+                    </Grid>
+                    
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

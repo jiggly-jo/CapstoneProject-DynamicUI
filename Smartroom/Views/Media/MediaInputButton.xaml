@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:Constants="clr-namespace:Smartroom.Helpers"
+    x:Class="Smartroom.Views.MediaInputButton">
+    <ContentView.Content>
+        <StackLayout
+            Orientation="Vertical"
+            Spacing="5"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </StackLayout.GestureRecognizers>
+
+            <ffimageloadingsvg:SvgCachedImage
+                MinimumWidthRequest="60"
+                MinimumHeightRequest="60"
+                Source="{Binding DeSelectedIconImage}">
+                <ffimageloadingsvg:SvgCachedImage.Triggers>
+                    <DataTrigger TargetType="ffimageloadingsvg:SvgCachedImage" Binding="{Binding IsSelected}" Value="true">
+                        <Setter Property="Source" Value="{Binding SelectedIconImage}" />
+                    </DataTrigger>
+                </ffimageloadingsvg:SvgCachedImage.Triggers>
+            </ffimageloadingsvg:SvgCachedImage>
+
+            <Utilities:SidebarLabel
+                AutomationProperties.IsInAccessibleTree="False"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Text="{Binding IconLabelText}"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                FontSize="29"
+                FontFamily="SofiaProRegular"
+                CharacterSpacing="0.75">
+
+                <Utilities:SidebarLabel.Triggers>
+                    <DataTrigger TargetType="Utilities:SidebarLabel" Binding="{Binding IsSelected}" Value="true">
+                        <Setter Property="TextColor" Value="{x:Static Constants:Constants.UofURed}" />
+                    </DataTrigger>
+                </Utilities:SidebarLabel.Triggers>
+            </Utilities:SidebarLabel>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

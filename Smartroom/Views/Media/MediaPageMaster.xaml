@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" xmlns:views="clr-namespace:Smartroom.Views"
+    x:Class="Smartroom.Views.MediaPageMaster">
+    <ContentView.Content>
+        <Grid
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="FillAndExpand"
+            Margin="0,0,0,10">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="51*"/>
+                <ColumnDefinition Width="27*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="67*"/>
+                <RowDefinition Height="23*"/>
+            </Grid.RowDefinitions>
+
+            <Utilities:HeadlineLabel
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Column="1"
+                Grid.Row="0"
+                BackgroundColor="White"
+                Text="MEDIA CONTROLS"
+                FontSize="33"
+                CharacterSpacing="3.25"           
+                VerticalTextAlignment="End"
+                x:Name="MediaLabel"/>
+
+            <ContentView
+                Grid.Column="0"
+                Grid.Row="1"
+                x:Name="MediaLeft"/>
+
+            <ContentView
+                Grid.Column="1"
+                Grid.Row="1"
+                x:Name="MediaCenter"/>
+
+            <ContentView
+                x:Name="MediaRightSound"
+                Grid.Column="2"
+                Grid.Row="1" />
+
+            <!--#region input section-->
+            <Grid
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Grid.Column="0"
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                Margin="20,0,20,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="80*"/>
+                </Grid.RowDefinitions>
+
+                <Utilities:SidebarLabel
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="FillAndExpand"
+                    Text="Inputs"
+                    FontSize="30"
+                    FontFamily="SofiaProRegular"
+                    CharacterSpacing="2.75"        
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="InputLabel"/>
+
+                <f9p:Frame
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    WidthRequest="700"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Padding="0"
+                    BorderWidth="2"
+                    BorderRadius="50"
+                    BorderColor="LightGray"
+                    BackgroundColor="#f8f8f8"
+                    HasShadow="false"
+                    x:Name="SourceFrame">
+
+                    <!--#region Input buttons-->
+                    <Grid
+                        AutomationProperties.IsInAccessibleTree="False"
+                        RowSpacing="0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        x:Name="SourceGrid"
+                        Padding="20">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <views:MediaInputButton
+                            Grid.Column="0"
+                            IsSelected="False"
+                            SelectedIconImage="resource://Smartroom.Resources.MediaIconTVRed.svg"
+                            DeSelectedIconImage="resource://Smartroom.Resources.MediaIconTV.svg"
+                            IconLabelText="Apple TV"
+                            x:Name="AppleMedia"
+                            ItemClicked="InputButtonItem_ItemClicked"
+                            />
+                        <views:MediaInputButton
+                            Grid.Column="1"
+                            IsSelected="False"
+                            SelectedIconImage="resource://Smartroom.Resources.MediaIconHDMIRed.svg"
+                            DeSelectedIconImage="resource://Smartroom.Resources.MediaIconHDMI.svg"
+                            IconLabelText="HDMI"
+                            x:Name="HDMIMedia"
+                            ItemClicked="InputButtonItem_ItemClicked"
+                            />
+                        <views:MediaInputButton
+                            Grid.Column="2"
+                            IsSelected="False"
+                            SelectedIconImage="resource://Smartroom.Resources.MediaIconCableRed.svg"
+                            DeSelectedIconImage="resource://Smartroom.Resources.MediaIconCable.svg"
+                            IconLabelText="Cable"
+                            x:Name="CableMedia"
+                            ItemClicked="InputButtonItem_ItemClicked"
+                            />
+                        <views:MediaInputButton
+                            Grid.Column="3"
+                            IsSelected="False"
+                            SelectedIconImage="resource://Smartroom.Resources.MediaIconBlueToothSoundRed.svg"
+                            DeSelectedIconImage="resource://Smartroom.Resources.MediaIconBlueToothSound.svg"
+                            IconLabelText="Soundbar"
+                            x:Name="AudioMedia"
+                            ItemClicked="InputButtonItem_ItemClicked"
+                            />
+                    </Grid>
+                    <!--#endregion Input buttons-->
+                </f9p:Frame>
+                <!--#endregion input section-->
+
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

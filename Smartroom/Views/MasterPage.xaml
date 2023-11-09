@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Smartroom.Views.MasterPage"
+             xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+             xmlns:commonViews="clr-namespace:Smartroom.Views">
+    <ContentPage.Content>
+        <Grid
+            Margin="0,20,0,0"
+            AutomationProperties.IsInAccessibleTree="False"
+            BackgroundColor="White" 
+            RowSpacing="0" 
+            ColumnSpacing="0"
+            x:FieldModifier="public"
+            x:Name="GridFrame">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="225*"/>
+                <ColumnDefinition Width="775*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*"/>
+            </Grid.RowDefinitions>
+
+            <ContentView
+                Grid.Column="0"
+                VerticalOptions="FillAndExpand"
+                x:Name="SidebarColumn"/>
+            <ContentView
+                Grid.Column="1"
+                Padding="10,0,0,0"
+                VerticalOptions="FillAndExpand"
+                x:Name="mainContent"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

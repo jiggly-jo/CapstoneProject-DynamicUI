@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Smartroom.Views.SidebarView"
+             xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+             xmlns:views="clr-namespace:Smartroom.Views"
+             xmlns:Constants="clr-namespace:Smartroom.Helpers"
+             x:Name="sidebar_view">
+    <ContentView.Content>
+        <Grid
+            BackgroundColor="{x:Static Constants:Constants.UofURed}"
+            x:Name="MenuItemLayout"
+            HorizontalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+
+            <!--Logo-->
+            <Frame
+                Grid.Row="0"
+                HeightRequest="200"
+                BackgroundColor="Transparent"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand">
+
+                <Image
+                    x:Name="ULogo"
+                    AutomationProperties.IsInAccessibleTree="False"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Source="{Utilities:ImageResource Smartroom.Icons.UHLogo.png}"/>
+
+            </Frame>
+
+            <FlexLayout Wrap="Wrap" Grid.Row="1"
+                        Margin="0,0,0,10"
+                        VerticalOptions="StartAndExpand"
+                        x:Name="SidebarFlexLayout">
+                <views:SidebarItem Text="Media" x:Name="MediaRow" ItemClicked="SidebarItem_ItemClicked"
+                                   AutomationProperties.Name="Media"
+                                   AutomationProperties.IsInAccessibleTree="True"
+                                   IsVisible="{Binding MediaVisibility}"
+                                   SelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconMedia.png}"
+                                   DeSelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconMedia1.png}"/>
+
+                <views:SidebarItem Text="Door" x:Name="DoorRow" ItemClicked="SidebarItem_ItemClicked"
+                                   AutomationProperties.Name="Door"
+                                   AutomationProperties.IsInAccessibleTree="True"
+                                   IsVisible="{Binding DoorVisibility}"
+                                   SelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconDoor.png}"
+                                   DeSelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconDoor1.png}"/>
+
+                <views:SidebarItem Text="Lights" x:Name="LightsRow" ItemClicked="SidebarItem_ItemClicked"
+                                   AutomationProperties.Name="Lights"
+                                   AutomationProperties.IsInAccessibleTree="True"
+                                   IsVisible="{Binding LightsVisibility}"
+                                   SelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconLight.png}"
+                                   DeSelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconLight1.png}"/>
+
+                <views:SidebarItem Text="Blinds" x:Name="BlindsRow" ItemClicked="SidebarItem_ItemClicked"
+                                   IsVisible="{Binding BlindsVisibility}"
+                                   AutomationProperties.Name="Blinds"
+                                   AutomationProperties.IsInAccessibleTree="True"
+                                   SelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconBlind.png}"
+                                   DeSelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconBlind1.png}"/>
+
+                <views:SidebarItem Text="Climate" x:Name="TempRow" ItemClicked="SidebarItem_ItemClicked"
+                                   IsVisible="{Binding ClimateVisibility}"
+                                   AutomationProperties.Name="Climate"
+                                   AutomationProperties.IsInAccessibleTree="True"
+                                   SelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconTemperature.png}"
+                                   DeSelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconTemperature1.png}"/>
+
+                <views:SidebarItem Text="Elevator" x:Name="ElevatorRow" ItemClicked="SidebarItem_ItemClicked"
+                                   IsVisible="{Binding ElevatorVisibility}"
+                                   AutomationProperties.Name="Elevator"
+                                   AutomationProperties.IsInAccessibleTree="True"
+                                   SelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconElevator.png}"
+                                   DeSelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconElevator1.png}"/>
+
+                <views:SidebarItem Text="Nurse" x:Name="NurseRow" ItemClicked="SidebarItem_ItemClicked"
+                                   AutomationProperties.Name="Nurse"
+                                   AutomationProperties.IsInAccessibleTree="True"
+                                   IsVisible="{Binding NurseVisibility}"
+                                   SelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconNurse.png}"
+                                   DeSelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconNurse1.png}"/>
+
+                <views:SidebarItem Text="Options" x:Name="OptionsRow" ItemClicked="SidebarItem_ItemClicked"
+                                   IsVisible="{Binding OptionsVisibility}"
+                                   AutomationProperties.Name="Options"
+                                   AutomationProperties.IsInAccessibleTree="True"
+                                   SelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconOption.png}"
+                                   DeSelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconOption1.png}"/>
+
+                <views:SidebarItem Text="DynamicUI" x:Name="DynamicUI" ItemClicked="SidebarItem_ItemClicked"
+                    IsVisible="{Binding OptionsVisibility}"
+                    AutomationProperties.Name="DynamicUI"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    SelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconOption.png}"
+                    DeSelectedIcon="{Utilities:ImageResource Smartroom.Icons.SideIconOption1.png}"/>
+            </FlexLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

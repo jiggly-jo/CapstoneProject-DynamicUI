@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Name="ElevatorContentView"
+    x:Class="Smartroom.Views.ElevatorPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Utilities="clr-namespace:Smartroom.Utilities">
+
+    <ContentView.Content>
+        <Grid
+            AutomationProperties.IsInAccessibleTree="False"
+            Grid.ColumnSpacing="0"
+            Grid.RowSpacing="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="30*"/>
+            </Grid.RowDefinitions>
+
+            <!--  Header  -->
+            <Utilities:HeadlineLabel
+                AutomationProperties.IsInAccessibleTree="False"  
+                Grid.Row="0"                           
+                Text="ELEVATOR CONTROLS"
+                BackgroundColor="White"
+                HorizontalOptions="Center"
+                VerticalTextAlignment="Center"/>
+
+            <Frame
+                Grid.Row="1"
+                Margin="20,40,20,0"
+                AutomationProperties.IsInAccessibleTree="False"
+                BackgroundColor="#f9f9f9"
+                CornerRadius="60"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                OutlineColor="LightGray"
+                VerticalOptions="FillAndExpand">
+
+                <Grid
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Grid.ColumnSpacing="0"
+                    Grid.RowSpacing="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25*" />
+                        <RowDefinition Height="30*" />
+                        <RowDefinition Height="25*" />
+                        <RowDefinition Height="20*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  Elevator  -->
+                    <ImageButton
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="2"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Elevator Up"
+                        BorderWidth="0"
+                        Command="{Binding BankUpCommand}"
+                        HorizontalOptions="Center"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUp.png}"
+                        VerticalOptions="Center" />
+
+                    <Grid
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        ColumnSpacing="0"
+                        HorizontalOptions="CenterAndExpand"
+                        RowSpacing="0"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Utilities:Sublabel
+                            Grid.Row="0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            Text="Elevator"/>
+
+                        <Utilities:ValueLabel
+                            Grid.Row="1"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            Style="{DynamicResource ValueLabelStyle}"
+                            Text="{Binding ElevBank}"/>
+
+                    </Grid>
+
+                    <ImageButton
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Padding="2"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Elevator Down"
+                        BorderWidth="0"
+                        Command="{Binding BankDownCommand}"
+                        HorizontalOptions="Center"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDown.png}"
+                        VerticalOptions="Center" />
+
+                    <!--  Source Floor  -->
+                    <ImageButton
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Padding="2"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Source Floor Up"
+                        BorderWidth="0"
+                        Command="{Binding OriginUpCommand}"
+                        HorizontalOptions="Center"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUp.png}"
+                        VerticalOptions="Center" />
+
+                    <Grid
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        ColumnSpacing="0"
+                        HorizontalOptions="CenterAndExpand"
+                        RowSpacing="0"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Utilities:Sublabel
+                            Grid.Row="0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Source Floor"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Utilities:ValueLabel Grid.Row="1"
+                               AutomationProperties.IsInAccessibleTree="False"
+                               HorizontalOptions="CenterAndExpand"
+                               Text="{Binding OriginFloor}"
+                               VerticalOptions="CenterAndExpand" />
+
+                    </Grid>
+
+                    <ImageButton
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Padding="2"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Source Floor Down"
+                        BorderWidth="0"
+                        Command="{Binding OriginDownCommand}"
+                        HorizontalOptions="Center"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDown.png}"
+                        VerticalOptions="Center" />
+
+                    <!--  Destination Floor  -->
+                    <ImageButton
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Padding="2"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Destination Floor Up"
+                        BorderWidth="0"
+                        Clicked="DFloorUp"
+                        HorizontalOptions="Center"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUp.png}"
+                        VerticalOptions="Center" />
+
+                    <Grid
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        ColumnSpacing="0"
+                        HorizontalOptions="CenterAndExpand"
+                        RowSpacing="0"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Utilities:Sublabel
+                            Grid.Row="0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Destination Floor"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Utilities:ValueLabel Grid.Row="1"
+                               AutomationProperties.IsInAccessibleTree="False"
+                               HorizontalOptions="CenterAndExpand"
+                               x:Name="DFloorLabel"
+                               Text="{Binding DestFloor}"
+                               VerticalOptions="CenterAndExpand" />
+
+                    </Grid>
+
+                    <ImageButton
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Padding="2"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Destination Floor Down"
+                        BorderWidth="0"
+                        Clicked="DFloorDown"
+                        HorizontalOptions="Center"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDown.png}"
+                        VerticalOptions="Center" />
+
+                    <!--  Call Button  -->
+                    <Button
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        FontFamily="SophiaProSemiBold"
+                        BorderColor="DarkGray"
+                        BackgroundColor="White"
+                        BorderRadius="10"
+                        BorderWidth="1.25"
+                        FontSize="30"
+                        TextColor = "#29282a"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Command="{Binding CallElevCommand}"
+                        Text="Call" />
+                    <!--
+                            WidthConstraint set to .5 means we have the width, we don't set XConstraint to .5 to put
+                            it in the middle because our control is now half the size, so we need to set it to half of a half to center it!
+                        -->
+                </Grid>
+            </Frame>
+
+            <Frame
+                Grid.Row="2"
+                Margin="20,20,20,20"
+                CornerRadius="60"
+                Padding="0"
+                HasShadow="False"
+                BorderColor="DarkGray"
+                BackgroundColor = "#AC162C"
+                Grid.Column="0">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="799*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        x:Name="LevelLabel"
+                        FontSize="70"
+                        FontFamily="SofiaProSemiBold"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        TextColor="White"
+                        Text="L1"/>
+
+                    <Frame
+                        AutomationProperties.IsInAccessibleTree="False"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Grid.Row="0"
+                        Padding="0"
+                        HasShadow="false"
+                        BackgroundColor="Black"
+                        Grid.Column="1"
+                        BorderColor="Black"/>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        x:Name="LevelInfo"
+                        FontSize="30"
+                        Padding="10,0,0,0"
+                        FontFamily="SofiaProRegular"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Start"
+                        TextColor="White"
+                        Text="Administration&#10;Admissions&#10;Miners Hospital&#10;Physical Medicine and Rehab Clinic&#10;Therapy Excersise Gym"/>
+
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

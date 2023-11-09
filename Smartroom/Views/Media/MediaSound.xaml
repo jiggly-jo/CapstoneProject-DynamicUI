@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch" xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+    x:Class="Smartroom.Views.MediaSound">
+    <ContentView.Content>
+        <!--#region media right section, volume buttons-->
+        <f9p:Frame
+                AutomationProperties.IsInAccessibleTree="False"           
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Padding="0"
+                BorderWidth="2"
+                BorderRadius="50"
+                BorderColor="LightGray"
+                BackgroundColor="#f8f8f8"
+                HasShadow="false"
+                x:Name="VolumeFrame">
+
+            <Grid
+                    AutomationProperties.IsInAccessibleTree="False"
+                    RowSpacing="0"
+                    ColumnSpacing="0"
+                    x:Name="VolumeGrid">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="225*"/>
+                    <RowDefinition Height="313*"/>
+                    <RowDefinition Height="150*"/>
+                    <RowDefinition Height="313*"/>
+                </Grid.RowDefinitions>
+
+                <Utilities:Stage3FrameVert
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Percent=".23"
+                        Margin = "2"
+                        CornerRadius="100"/>
+
+                <f9p:StateButton
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Mute"
+                        AutomationId="Mute"
+                        TabIndex="92"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Clicked="MuteButtonClicked"
+                        x:Name="MuteButton">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                                    WidthRequest="100"
+                                    HeightRequest="100"
+                                    Source="resource://Smartroom.Resources.MediaSoundMuteAndUnmuteButton.svg"/>
+                </f9p:StateButton>
+
+                <ffimageloadingsvg:SvgCachedImage
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        x:Name="VolumeUpBase"
+                        WidthRequest="200"
+                        HeightRequest="200"
+                        Source="resource://Smartroom.Resources.ArrowButtonBase.svg"/>
+
+                <f9p:StateButton
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="VolumeUp"
+                        AutomationId="Volume Up"
+                        TabIndex="92"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Clicked="VolumeUpClicked"
+                        x:Name="VolumeUpButton">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                                    WidthRequest="100"
+                                    HeightRequest="100"
+                                    Source="resource://Smartroom.Resources.ArrowUpRed.svg"/>
+                </f9p:StateButton>
+
+                <Utilities:ValueLabel
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        BackgroundColor="Transparent"
+                        Text="VOL"
+                        FontSize="33"
+                        CharacterSpacing="0.25"
+                        x:Name="VolumeLabel"/>
+
+                <ffimageloadingsvg:SvgCachedImage
+                        Grid.Column="0"
+                        Grid.Row="3"                        
+                        WidthRequest="200"
+                        HeightRequest="200"
+                        Source="resource://Smartroom.Resources.ArrowButtonBase.svg"
+                        x:Name="VolumeDownBase"/>
+
+                <f9p:StateButton
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="VolumeDown"
+                        AutomationId="Volume Down"
+                        TabIndex="92"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Clicked="VolumeDownClicked"
+                        x:Name="VolumeDownButton">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                                    WidthRequest="100"
+                                    HeightRequest="100"
+                                    Source="resource://Smartroom.Resources.ArrowDownRed.svg"/>
+                </f9p:StateButton>
+            </Grid>
+        </f9p:Frame>
+        <!--#endregion media right section-->
+    </ContentView.Content>
+</ContentView>

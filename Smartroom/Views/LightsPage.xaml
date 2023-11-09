@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Smartroom.Views.LightsPage"
+             xmlns:Utilities="clr-namespace:Smartroom.Utilities">
+    <ContentView.Content>
+        <Grid
+            AutomationProperties.IsInAccessibleTree="False"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            x:Name="LightsGrid"
+            x:FieldModifier="public"
+            RowSpacing="0" 
+            ColumnSpacing="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="112*"/>
+                <RowDefinition Height="51*"/>
+                <RowDefinition Height="190*"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="557*"/>
+            </Grid.RowDefinitions>
+
+            <Image
+                AutomationProperties.IsInAccessibleTree="True"
+                AutomationProperties.Name="Advanced"
+                TabIndex="10"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                x:Name="CycleImage"
+                x:FieldModifier="public"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Source="{Utilities:ImageResource Smartroom.Icons.LightAdvanced.png}"/>
+
+            <Utilities:HeadlineLabel
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Row="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="End"
+                x:Name="LightLabel"                
+                Text="LIGHT CONTROLS"
+                x:FieldModifier="public"/>
+
+            <Utilities:Sublabel
+                AutomationProperties.IsInAccessibleTree="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                VerticalTextAlignment = "End"
+                HorizontalTextAlignment = "Center"
+                x:Name="CycleLabel"
+                FontFamily="SofiaProRegular"
+                TextColor="#414042"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Text="Advanced">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LightCycle"/>
+                </Label.GestureRecognizers>
+            </Utilities:Sublabel>
+
+            <Utilities:Sublabel
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Column="2"
+                Grid.Row="1"
+                TextColor="#414042"
+                x:Name="SceneLabel"
+                HorizontalOptions="FillAndExpand"
+                FontFamily="SofiaProRegular"
+                VerticalOptions="FillAndExpand"
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Center"
+                Text="Scenes"/>
+
+            <Frame
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Column="0"
+                Grid.Row="2"
+                Grid.ColumnSpan="5"
+                CornerRadius="50"
+                HasShadow="False"
+                x:Name="SceneFrame"
+                Padding="0"
+                BorderColor="DarkGray"
+                BackgroundColor="#f8f8f8"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="16*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70*"/>
+                        <RowDefinition Height="30*"/>
+                    </Grid.RowDefinitions>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        TabIndex="12"
+                        x:Name="OffButton"
+                        AutomationProperties.Name="Off"
+                        AutomationId="Off"
+                        x:FieldModifier="public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Clicked="OffClicked"
+                        Source="{Utilities:ImageResource Smartroom.Icons.OptionOff.png}"/>
+
+                    <Utilities:SidebarLabel
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        x:Name="OffLabel"
+                        x:FieldModifier="Public"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        TextColor="#414042"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        Text="Off"/>
+
+                    <ImageButton
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        TabIndex="13"
+                        x:Name="NightButton"
+                        AutomationProperties.Name="Night"
+                        AutomationId="Off"
+                        x:FieldModifier="public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        Clicked="NightClicked"
+                        Source="{Utilities:ImageResource Smartroom.Icons.LightIconNight.png}"/>
+
+                    <Utilities:SidebarLabel
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        x:Name="NightLabel"
+                        x:FieldModifier="public"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        TextColor="#414042"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"             
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        Text="Night"/>
+
+                    <ImageButton
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        TabIndex="14"
+                        x:Name="TVButton"
+                        AutomationProperties.Name="TV"
+                        AutomationId="TV"
+                        x:FieldModifier="Public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        Clicked="TVClicked"
+                        Source="{Utilities:ImageResource Smartroom.Icons.LightIconTV.png}"/>
+
+                    <Utilities:SidebarLabel
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        x:Name="TVLabel"
+                        x:FieldModifier="public"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        TextColor="#414042"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"   
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        Text="TV"/>
+
+                    <ImageButton
+                        Grid.Column="3"
+                        Grid.Row="0"
+                        TabIndex="15"
+                        x:Name="SoftButton"
+                        AutomationProperties.Name="Soft"
+                        AutomationId="Soft"
+                        x:FieldModifier="Public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        Clicked="SoftClicked"
+                        Source="{Utilities:ImageResource Smartroom.Icons.LightIconSoft.png}"/>
+
+                    <Utilities:SidebarLabel
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        x:Name="SoftLabel"
+                        x:FieldModifier="Public"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        TextColor="#414042"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"                    
+                        Text="Soft"/>
+
+                    <ImageButton
+                        Grid.Column="4"
+                        Grid.Row="0"
+                        TabIndex="16"
+                        x:Name="ReadingButton"
+                        AutomationProperties.Name="Reading"
+                        AutomationId="Reading"
+                        x:FieldModifier="public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        Clicked="ReadingClicked"
+                        Source="{Utilities:ImageResource Smartroom.Icons.LightIconReading.png}"/>
+
+                    <Utilities:SidebarLabel
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        x:Name="ReadingLabel"
+                        x:FieldModifier="Public"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        TextColor="#414042"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"       
+                        Text="Reading"/>
+
+                    <ImageButton
+                        Grid.Column="5"
+                        Grid.Row="0"
+                        TabIndex="17"
+                        x:Name="FullButton"
+                        AutomationProperties.Name="Full"
+                        AutomationId="Full"
+                        x:FieldModifier="public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        Clicked="FullClicked"
+                        Source="{Utilities:ImageResource Smartroom.Icons.LightIconFull.png}"/>
+
+                    <Utilities:SidebarLabel
+                        Grid.Row="1"
+                        Grid.Column="5"
+                        x:Name="FullLabel"
+                        x:FieldModifier="Public"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        TextColor="#414042"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        Text="Full"/>
+
+                </Grid>
+            </Frame>
+
+            <Utilities:Sublabel
+                Grid.Column="0"
+                Grid.Row="3"
+                x:Name="AmbientLabel"
+                Text="Ambient"
+                TextColor="#414042"
+                AutomationProperties.IsInAccessibleTree="False"/>
+
+            <Frame
+                Grid.Column="0"
+                Grid.Row="4"
+                CornerRadius="40"
+                x:Name="AmbientFrame"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                OutlineColor="LightGray"                          
+                BackgroundColor="#f8f8f8"
+                Padding="0"
+                AutomationProperties.IsInAccessibleTree="False">
+
+                <Grid
+                    AutomationProperties.IsInAccessibleTree="False"
+                    RowSpacing="0" 
+                    ColumnSpacing="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="34*"/>
+                        <RowDefinition Height="12*"/>
+                        <RowDefinition Height="34*"/>
+                    </Grid.RowDefinitions>
+
+                    <Utilities:Stage3FrameVert
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Percent=".20"
+                        Margin = "2"
+                        CornerRadius="100"/>
+
+                    <Utilities:FillBar
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        BackgroundColor="#e6e6e6"
+                        FillColor="#f8f8f8"
+                        Value="{Binding Ambient}"
+                        CornerRadius="80"/>
+                    
+                    <Switch
+                        OnColor="#AC162C"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="17"
+                        AutomationId="AmbientToggle"
+                        AutomationProperties.Name="Ambient Toggle"
+                        IsToggled="{Binding AmbientLightOnOff, Mode=TwoWay}"
+                        Toggled="HandleAmbientToggle"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        x:Name="AmbientToggle"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        AutomationProperties.Name="Ambient Up"                     
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="18"
+                        x:Name="AmbientUpButton"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Command="{Binding AmbientLightsUpCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUp.png}"/>
+
+                    <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        x:Name="AmbientValueLabel"
+                        TextColor="#414042"
+                        x:FieldModifier="Public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Text="{Binding Ambient}"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        AutomationProperties.Name="Ambient Down"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="19"
+                        x:Name="AmbientDownButton"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Command="{Binding AmbientLightsDownCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDown.png}"/>
+
+                </Grid>
+            </Frame>
+
+            <Utilities:Sublabel
+                Grid.Column="1"
+                Grid.Row="3"
+                x:Name="EntranceLabel"
+                Text="Entrance"
+                TextColor="#414042"
+                AutomationProperties.IsInAccessibleTree="False"/>
+
+            <Frame
+                Grid.Column="1"
+                Grid.Row="4"
+                CornerRadius="40"
+                x:Name="EntranceFrame"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                OutlineColor="LightGray"                       
+                BackgroundColor="#f8f8f8"
+                Padding="0"
+                AutomationProperties.IsInAccessibleTree="False">
+
+                <Grid
+                AutomationProperties.IsInAccessibleTree="False"
+                RowSpacing="0"
+                
+                ColumnSpacing="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="34*"/>
+                        <RowDefinition Height="12*"/>
+                        <RowDefinition Height="34*"/>
+                    </Grid.RowDefinitions>
+
+                    <Utilities:Stage3FrameVert
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Percent=".20"
+                        Margin = "2"
+                        CornerRadius="100"/>
+
+                    <Utilities:FillBar
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        BackgroundColor="#e6e6e6"
+                        FillColor="#f8f8f8"
+                        Value="{Binding Entrance}"
+                        CornerRadius="80"/>
+
+                    <Switch
+                        OnColor="#AC162C"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="20"
+                        AutomationId="EntranceToggle"
+                        AutomationProperties.Name="Entrance Toggle"
+                        IsToggled="{Binding EntranceLightOnOff, Mode=TwoWay}"
+                        Toggled="HandleEntranceToggle"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        x:Name="EntranceToggle"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        AutomationProperties.Name="Entrance Up"                                          
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="21"
+                        x:Name="EntranceUpButton"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Command="{Binding EntranceLightsUpCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUp.png}"/>
+
+                    <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        x:Name="EntranceValueLabel"
+                        TextColor="#414042"
+                        x:FieldModifier="Public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Text="{Binding Entrance}"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="22"
+                        AutomationProperties.Name="Entrance Down"
+                        x:Name="EntranceDownButton"
+                        Command="{Binding EntranceLightsDownCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDown.png}"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+
+                </Grid>
+            </Frame>
+
+            <Utilities:Sublabel
+                Grid.Column="2"
+                Grid.Row="3"
+                x:Name="ReadLabel"
+                Text="Read"
+                TextColor="#414042"
+                AutomationProperties.IsInAccessibleTree="False"/>
+
+            <Frame
+                Grid.Column="2"
+                Grid.Row="4"
+                HasShadow="False"
+                CornerRadius="40"
+                OutlineColor="LightGray"                        
+                BackgroundColor="#f8f8f8"
+                Padding="0"
+                x:Name="ReadingFrame"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                AutomationProperties.IsInAccessibleTree="False">
+
+                <Grid
+                    AutomationProperties.IsInAccessibleTree="False"
+                    RowSpacing="0"
+            
+                    ColumnSpacing="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="34*"/>
+                        <RowDefinition Height="12*"/>
+                        <RowDefinition Height="34*"/>
+                    </Grid.RowDefinitions>
+
+                    <Utilities:Stage3FrameVert
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Percent=".20"
+                        Margin = "2"
+                        CornerRadius="100"/>
+
+                    <Utilities:FillBar
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        BackgroundColor="#e6e6e6"
+                        FillColor="#f8f8f8"
+                        Value="{Binding Reading}"
+                        CornerRadius="80"/>
+
+                    <Switch
+                        OnColor="#AC162C"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="23"
+                        AutomationId="ReadingToggle"
+                        AutomationProperties.Name="Reading Toggle"
+                        IsToggled="{Binding ReadingLightOnOff, Mode=TwoWay}"
+                        Toggled="HandleReadingToggle" 
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        x:Name="ReadingToggle"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        AutomationProperties.Name="Reading Up"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="24"
+                        x:Name="ReadingUpButton"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Command="{Binding ReadingLightsUpCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUp.png}"/>
+
+                    <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        TextColor="#414042"
+                        x:Name="ReadingValueLabel"
+                        x:FieldModifier="Public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Text="{Binding Reading}"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        AutomationProperties.Name="Reading Down"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="25"
+                        x:Name="ReadingDownButton"
+                        Command="{Binding ReadingLightsDownCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDown.png}"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+
+                </Grid>
+            </Frame>
+
+            <Utilities:Sublabel
+                Grid.Column="3"
+                Grid.Row="3"
+                x:Name="BathLabel"
+                TextColor="#414042"
+                Text="Bath"
+                AutomationProperties.IsInAccessibleTree="False"/>
+
+            <Frame
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Column="3"
+                Grid.Row="4"
+                HasShadow="False"
+                CornerRadius="40"
+                OutlineColor="LightGray"                         
+                BackgroundColor="#f8f8f8"
+                Padding="0"
+                x:Name="BathFrame"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                <Grid
+                    AutomationProperties.IsInAccessibleTree="False"
+                    RowSpacing="0"
+                    ColumnSpacing="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="34*"/>
+                        <RowDefinition Height="12*"/>
+                        <RowDefinition Height="34*"/>
+                    </Grid.RowDefinitions>
+
+                    <Utilities:Stage3FrameVert
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Percent=".20"
+                        Margin = "2"
+                        CornerRadius="100"/>
+
+                    <Utilities:FillBar
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        BackgroundColor="#e6e6e6"
+                        FillColor="#f8f8f8"
+                        Value="{Binding Bathroom}"
+                        CornerRadius="80"/>
+
+                    <Switch
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="26"
+                        OnColor="#AC162C"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        AutomationProperties.Name="Bathroom Toggle"
+                        IsToggled="{Binding BathroomLightOnOff, Mode=TwoWay}"
+                        Toggled="HandleBathroomToggle" 
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        x:Name="BathroomToggle"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        AutomationProperties.Name="Bathroom Up"
+                        Padding="0"                                 
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="27"
+                        x:Name="BathroomUpButton"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Command="{Binding BathLightsUpCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUp.png}"/>
+
+                    <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        x:Name="BathroomValueLabel"
+                        x:FieldModifier="Public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        TextColor="#414042"
+                        Text="{Binding Bathroom}"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="28"
+                        AutomationProperties.Name="Bathroom Down"
+                        x:Name="BathroomDownButton"
+                        Command="{Binding BathLightsDownCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDown.png}"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+
+                </Grid>
+            </Frame>
+
+            <Utilities:Sublabel
+                Grid.Column="4"
+                Grid.Row="3"
+                x:Name="ExamLabel"
+                TextColor="#414042"
+                AutomationProperties.IsInAccessibleTree="False"
+                Text="Exam"/>
+
+            <Frame
+                Grid.Column="4"
+                Grid.Row="4"
+                HasShadow="False"
+                CornerRadius="40"
+                OutlineColor="LightGray"
+                AutomationProperties.IsInAccessibleTree="False"
+                BackgroundColor="#f8f8f8"
+                Padding="0"
+                x:Name="ExamFrame"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                <Grid
+                    AutomationProperties.IsInAccessibleTree="False"
+                    RowSpacing="0" 
+                    ColumnSpacing="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="34*"/>
+                        <RowDefinition Height="12*"/>
+                        <RowDefinition Height="34*"/>
+                    </Grid.RowDefinitions>
+
+                    <Utilities:Stage3FrameVert
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Percent=".20"
+                        Margin = "2"
+                        CornerRadius="100"/>
+
+                    <Utilities:FillBar
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.RowSpan="3"
+                        BackgroundColor="#e6e6e6"
+                        FillColor="#f8f8f8"
+                        Value="{Binding Exam}"
+                        CornerRadius="80"/>
+
+                    <Switch
+                        OnColor="#AC162C"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="29"
+                        AutomationProperties.Name="Exam Toggle"
+                        IsToggled="{Binding ExamLightOnOff, Mode=TwoWay}"
+                        Toggled="HandleExamToggle"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        x:Name="ExamToggle"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        AutomationProperties.Name="Exam Up"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="30"
+                        x:Name="ExamUpButton"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Command="{Binding ExamLightsUpCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleUp.png}"/>
+
+                    <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        x:Name="ExamValueLabel"
+                        TextColor="#414042"
+                        x:FieldModifier="Public"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        FontFamily="SofiaProRegular"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Text="{Binding Exam}"/>
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        AutomationProperties.Name="Exam Down"
+                        x:Name="ExamDownButton"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="31"
+                        Command="{Binding ExamLightsDownCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ArrowCircleDown.png}"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"/>
+
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

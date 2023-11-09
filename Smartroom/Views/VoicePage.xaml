@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Smartroom.Views.VoicePage">
+    <ContentView.Content>
+        <Grid
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "100*"/>
+            </Grid.RowDefinitions>
+
+            <Frame
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="Black"
+                Opacity=".7"/>
+
+            <Label
+                FontSize="40"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Text="{Binding Message}"
+                x:Name="VoiceLabel"
+                FontFamily = "SofiaProRegular"/>
+
+        </Grid>
+
+       
+    </ContentView.Content>
+</ContentView>

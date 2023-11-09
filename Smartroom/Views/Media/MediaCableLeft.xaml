@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    x:Class="Smartroom.Views.MediaCableLeft"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:Utilities="clr-namespace:Smartroom.Utilities">
+    <ContentView.Content>
+        <f9p:Frame
+            AutomationProperties.IsInAccessibleTree="False"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="0"
+            BorderWidth="2"
+            BorderRadius="50"
+            BorderColor="LightGray"
+            BackgroundColor="#f8f8f8"
+            HasShadow="false"
+            x:Name="ChannelFrame">
+
+            <Grid
+                AutomationProperties.IsInAccessibleTree="False"
+                ColumnSpacing="0"
+                RowSpacing="0"                
+                x:Name="PowerGrid">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="22*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="28*"/>
+                </Grid.RowDefinitions>                
+
+                <Utilities:Stage3FrameVert
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.RowSpan="4"
+                    Percent=".22"
+                    Margin = "2"
+                    CornerRadius="100"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Power"
+                    AutomationId="Power"                    
+                    TabIndex="92"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="PowerButtonClicked"
+                    Command="{Binding TVOnOffCommand}"
+                    x:Name="PowerButton">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaPowerButton.svg"/>
+                </f9p:StateButton>
+
+
+                <ffimageloadingsvg:SvgCachedImage
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    WidthRequest="200"
+                    HeightRequest="200"
+                    Source="resource://Smartroom.Resources.ArrowButtonBase.svg"
+                    x:Name="ChannelUpBase"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="ChannelUp"
+                    AutomationId="Channel Up"
+                    TabIndex="92"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Command="{Binding ChannelUpCommand}"
+                    Clicked="ChannelUpClicked"
+                    x:Name="ChannelUp">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.ArrowUpRed.svg"/>
+
+                </f9p:StateButton>
+
+                <Utilities:ValueLabel
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Margin="2"
+                    BackgroundColor="Transparent"
+                    Text="CH"
+                    FontSize="33"
+                    CharacterSpacing="0.0"
+                    x:Name="CHLabel"/>
+
+                <ffimageloadingsvg:SvgCachedImage
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    WidthRequest="200"
+                    HeightRequest="200"
+                    Source="resource://Smartroom.Resources.ArrowButtonBase.svg"
+                    x:Name="ChannelDownBase"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="ChannelDown"
+                    AutomationId="Channel Down"
+                    TabIndex="92"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Command="{Binding ChannelDownCommand}"
+                    Clicked="ChannelDownClicked"
+                    x:Name="ChannelDown">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.ArrowDownRed.svg"/>
+
+                </f9p:StateButton>
+            </Grid>
+        </f9p:Frame>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Smartroom.Views.TutorialPage"
+             xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+             InputTransparent="True"
+             CascadeInputTransparent="False">
+    <ContentView.Content>
+        <Grid
+            x:Name="TutorialGrid"
+            BackgroundColor="Transparent"
+            InputTransparent="True"
+            CascadeInputTransparent="False"
+            AutomationProperties.IsInAccessibleTree="False"
+            RowSpacing="0"
+            ColumnSpacing="0">
+
+             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="14*"/>
+                <ColumnDefinition Width="72*"/>
+                <ColumnDefinition Width="14*"/>  
+                </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="185*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="297*"/>
+            </Grid.RowDefinitions>
+
+            <Frame
+                Grid.Column="1"
+                Grid.Row="1"
+                InputTransparent="True"
+                CascadeInputTransparent="False"
+                BorderColor="LightGray"
+                BackgroundColor="White"
+                HasShadow="False"
+                x:Name="TutorialFrame"
+                x:FieldModifier="public"
+                Padding="0,10,0,20"
+                CornerRadius="20">
+
+                <Grid
+                    x:Name="TutorialBoxGrid"
+                    AutomationProperties.IsInAccessibleTree="False"
+                    RowSpacing="0"
+                    ColumnSpacing="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>        
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>          
+
+                    <Utilities:HeadlineLabel
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Smart Room Tutorial"/>               
+
+                    <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Clicked="QuitClicked"
+                        Margin="10,0,0,0"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Source="{Utilities:ImageResource Smartroom.Icons.QuitIcon.png}"/>
+
+                    <Frame
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        HasShadow="False"
+                        BackgroundColor="Black"/>
+
+                    <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        x:FieldModifier="public"
+                        x:Name="TutorialLabel"
+                        Margin="100,0,30,0"
+                        HorizontalTextAlignment="Start"
+                        Text="Hi! This is the Craig H. Neilsen Rehabilitation Hospital Smart Room tutorial.&#x0a;&#x0a;Let's learn how it works!"/>
+
+                    <Button
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Margin="20,0,0,0"
+                        Padding="40,10,40,10"
+                        FontFamily="SophiaProRegular"
+                        x:Name="SkipButton"
+                        x:FieldModifier="public"
+                        Text="Skip"
+                        FontSize="30"
+                        IsVisible="false"
+                        CornerRadius="15"
+                        BorderWidth="2"
+                        BorderColor="Black"
+                        Clicked="NextClicked"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        HorizontalOptions="Start"
+                        VerticalOptions="End"/>
+
+                    <Button
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Margin="0,0,20,0"
+                        Padding="40,10,40,10"
+                        FontFamily="SophiaProRegular"
+                        x:Name="NextButton"
+                        x:FieldModifier="public"
+                        Text="Next"
+                        FontSize="30"
+                        CornerRadius="15"
+                        Clicked="NextClicked"
+                        TextColor="White"
+                        BackgroundColor="#AC162C"
+                        HorizontalOptions="End"
+                        VerticalOptions="End"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

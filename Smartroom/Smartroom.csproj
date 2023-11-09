@@ -1,0 +1,316 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceAssemblyReference>true</ProduceAssemblyReference>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>F:\Work\frontend\frontend\Smartroom\Backup\Smartroom\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <Configurations>Debug;Release;TestConfig</Configurations>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>latest</LangVersion>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'TestConfig|AnyCPU' ">
+    <IntermediateOutputPath>obj\TestConfig</IntermediateOutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\TestConfig</OutputPath>
+    <DefineConstants></DefineConstants>
+    <NoWarn></NoWarn>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2012" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Forms9Patch" Version="2.4.9" />
+    <PackageReference Include="MvvmCross" Version="7.1.2" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.24" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Views\Media\" />
+    <Folder Include="Models\DynamicPageModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\Materials.cs" />
+    <Compile Remove="ViewModels\Commands.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\ArrowCircleDownFull.png" />
+    <EmbeddedResource Include="Icons\ArrowCircleDown.png" />
+    <EmbeddedResource Include="Icons\ArrowCircleUp.png" />
+    <EmbeddedResource Include="Icons\ArrowCircleUpFull.png" />
+    <EmbeddedResource Include="Icons\DoorIconClose.png" />
+    <EmbeddedResource Include="Icons\DoorIconOpen.png" />
+    <EmbeddedResource Include="Icons\DoorIconOpenPartially.png" />
+    <EmbeddedResource Include="Icons\tv.png" />
+    <EmbeddedResource Include="Icons\volumeup.png" />
+    <EmbeddedResource Include="Icons\volumedown.png" />
+    <EmbeddedResource Include="Icons\volumeoff.png" />
+    <EmbeddedResource Include="Icons\off.png" />
+    <EmbeddedResource Include="Icons\medium.png" />
+    <EmbeddedResource Include="Icons\nurse.png" />
+    <EmbeddedResource Include="Icons\questionsound.wav" />
+    <EmbeddedResource Include="Icons\NurseCallBackground1.png" />
+    <EmbeddedResource Include="Icons\OptionIconSamMac.png" />
+    <EmbeddedResource Include="Icons\SideIconDoor1.png" />
+    <EmbeddedResource Include="Icons\SideIconLight1.png" />
+    <EmbeddedResource Include="Icons\SideIconBlind1.png" />
+    <EmbeddedResource Include="Icons\SideIconTemperature1.png" />
+    <EmbeddedResource Include="Icons\SideIconElevator1.png" />
+    <EmbeddedResource Include="Icons\SideIconOption1.png" />
+    <EmbeddedResource Include="Icons\SideBarIconSelectedTriangle.png" />
+    <EmbeddedResource Include="Icons\SideIconOption.png" />
+    <EmbeddedResource Include="Icons\SideIconElevator.png" />
+    <EmbeddedResource Include="Icons\SideIconTemperature.png" />
+    <EmbeddedResource Include="Icons\SideIconBlind.png" />
+    <EmbeddedResource Include="Icons\SideIconLight.png" />
+    <EmbeddedResource Include="Icons\SideIconDoor.png" />
+    <EmbeddedResource Include="Icons\SideIconMedia.png" />
+    <EmbeddedResource Include="Icons\SideIconMedia1.png" />
+    <EmbeddedResource Include="Icons\OptionIconMac.png" />
+    <EmbeddedResource Include="Icons\OptionIconSam.png" />
+    <EmbeddedResource Include="Icons\OptionIconListen.png" />
+    <EmbeddedResource Include="Icons\OptionIconMute.png" />
+    <EmbeddedResource Include="Icons\LightIconNight.png" />
+    <EmbeddedResource Include="Icons\LightIconTV.png" />
+    <EmbeddedResource Include="Icons\LightIconSoft.png" />
+    <EmbeddedResource Include="Icons\LightIconReading.png" />
+    <EmbeddedResource Include="Icons\LightIconFull.png" />
+    <EmbeddedResource Include="Icons\MediaPowerButton.png" />
+    <EmbeddedResource Include="Icons\MediaSoundMuteButton.png" />
+    <EmbeddedResource Include="Icons\MediaIconChromeCast.png" />
+    <EmbeddedResource Include="Icons\MediaIconCable.png" />
+    <EmbeddedResource Include="Icons\MediaIconBlueToothInput.png" />
+    <EmbeddedResource Include="Icons\MediaIconBlueToothSound.png" />
+    <EmbeddedResource Include="Resources\ArrowBarNumberBackgound.svg" />
+    <EmbeddedResource Include="Resources\ArrowDown.svg" />
+    <EmbeddedResource Include="Resources\ArrowDownMax.svg" />
+    <EmbeddedResource Include="Resources\ArrowUp.svg" />
+    <EmbeddedResource Include="Resources\ArrowUpMax.svg" />
+    <EmbeddedResource Include="Resources\DoorIconClose.svg" />
+    <EmbeddedResource Include="Resources\DoorIconOpen.svg" />
+    <EmbeddedResource Include="Resources\DoorIconOpenPartially.svg" />
+    <EmbeddedResource Include="Resources\verticalline.svg" />
+    <EmbeddedResource Include="Icons\UHLogo.png" />
+    <EmbeddedResource Include="Icons\MediaIconTVSound.png" />
+    <EmbeddedResource Include="Icons\sofiapro-semibold.otf" />
+    <EmbeddedResource Include="Icons\sofiapro-regular.otf" />
+    <EmbeddedResource Include="Icons\MediaNumberButtonBackground.png" />
+    <EmbeddedResource Include="Icons\QuestionIcon.png" />
+    <EmbeddedResource Include="Icons\QuestionIconWhite.png" />
+    <EmbeddedResource Include="Icons\QuitIcon.png" />
+    <EmbeddedResource Include="Icons\MediaNumberPadBackground.png" />
+    <EmbeddedResource Include="Icons\MediaIconNumpad.png" />
+    <EmbeddedResource Include="Icons\MediaIconChannelList.png" />
+    <EmbeddedResource Include="Icons\AppleRed.png" />
+    <EmbeddedResource Include="Icons\MediaIconCableRed.png" />
+    <EmbeddedResource Include="Icons\MediaIconNumpadRed.png" />
+    <EmbeddedResource Include="Icons\MediaIconChannelListGray.png" />
+    <EmbeddedResource Include="Icons\MediaIconMenu.png" />
+    <EmbeddedResource Include="Icons\MediaIconPlay.png" />
+    <EmbeddedResource Include="Icons\ArrowLeftRed.png" />
+    <EmbeddedResource Include="Icons\ArrowRightRed.png" />
+    <EmbeddedResource Include="Icons\ArrowUpRed.png" />
+    <EmbeddedResource Include="Icons\ArrowDownRed.png" />
+    <EmbeddedResource Include="Icons\HDMIRed.png" />
+    <EmbeddedResource Include="Icons\MediaIconBlueToothSoundRed.png" />
+    <EmbeddedResource Include="Icons\LightSimple.png" />
+    <EmbeddedResource Include="Icons\OptionListen3s.png" />
+    <EmbeddedResource Include="Icons\OptionListen5s.png" />
+    <EmbeddedResource Include="Icons\OptionMicMute.png" />
+    <EmbeddedResource Include="Icons\LightIconSoftRed.png" />
+    <EmbeddedResource Include="Icons\LightIconFullRed.png" />
+    <EmbeddedResource Include="Icons\LightStandard.png" />
+    <EmbeddedResource Include="Icons\LightIconNightRed.png" />
+    <EmbeddedResource Include="Icons\LightIconTVRed.png" />
+    <EmbeddedResource Include="Icons\LightIconReadingRed.png" />
+    <EmbeddedResource Include="Icons\LightAdvanced.png" />
+    <EmbeddedResource Include="Icons\BlindBlackout.png" />
+    <EmbeddedResource Include="Icons\BlindSheer.png" />
+    <EmbeddedResource Include="Icons\BlindAllRed.png" />
+    <EmbeddedResource Include="Icons\BlindBlackoutRed.png" />
+    <EmbeddedResource Include="Icons\BlindAll.png" />
+    <EmbeddedResource Include="Icons\BlindSheerRed.png" />
+    <EmbeddedResource Include="Icons\MediaSoundMute.png" />
+    <EmbeddedResource Include="Icons\SideBarIconColoredTriangle.png" />
+    <EmbeddedResource Include="Icons\SideIconOptionColor.png" />
+    <EmbeddedResource Include="Icons\SideIconTemperatureColor.png" />
+    <EmbeddedResource Include="Icons\SideIconBlindColor.png" />
+    <EmbeddedResource Include="Icons\SideIconLightColor.png" />
+    <EmbeddedResource Include="Icons\SideIconDoorColor.png" />
+    <EmbeddedResource Include="Icons\SideIconMediaColor.png" />
+    <EmbeddedResource Include="Icons\OptionListen1s.png" />
+    <EmbeddedResource Include="Icons\OptionOffRed.png" />
+    <EmbeddedResource Include="Icons\OptionOff.png" />
+    <EmbeddedResource Include="Icons\ClockOff.png" />
+    <EmbeddedResource Include="Icons\ClockOffRed.png" />
+    <EmbeddedResource Include="Icons\ClockLow.png" />
+    <EmbeddedResource Include="Icons\ClockLowRed.png" />
+    <EmbeddedResource Include="Icons\SideIconNurse.png" />
+    <EmbeddedResource Include="Icons\SideIconNurse1.png" />
+    <EmbeddedResource Include="Icons\SideIconNurseColor.png" />
+    <EmbeddedResource Include="Icons\SideIconElevatorColor.png" />
+    <EmbeddedResource Include="Resources\MediaIconTV.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MediaIconHDMI.svg" />
+    <EmbeddedResource Include="Resources\MediaIconCable.svg" />
+    <EmbeddedResource Include="Resources\MediaIconCableRed.svg" />
+    <EmbeddedResource Include="Resources\MediaIconBlueToothSound.svg" />
+    <EmbeddedResource Include="Resources\MediaIconBlueToothInput.svg" />
+    <EmbeddedResource Include="Resources\MediaNumberButtonBackground.svg" />
+    <EmbeddedResource Include="Resources\MediaNumberPadBackground.svg" />
+    <EmbeddedResource Include="Resources\MediaIconNumpadRed.svg" />
+    <EmbeddedResource Include="Resources\MediaIconChannelList.svg" />
+    <EmbeddedResource Include="Resources\MediaIconNumpad.svg" />
+    <EmbeddedResource Include="Resources\MediaIconChannelListRed.svg" />
+    <EmbeddedResource Include="Resources\MediaPowerButton.svg" />
+    <EmbeddedResource Include="Resources\ArrowUpRed.svg" />
+    <EmbeddedResource Include="Resources\ArrowButtonBase.svg" />
+    <EmbeddedResource Include="Resources\ArrowDownRed.svg" />
+    <EmbeddedResource Include="Resources\MediaIconPlay.svg" />
+    <EmbeddedResource Include="Resources\MediaIconMenu.svg" />
+    <EmbeddedResource Include="Resources\MediaSoundMuteAndUnmuteButton.svg" />
+    <EmbeddedResource Include="Resources\MediaIconTVRed.svg" />
+    <EmbeddedResource Include="Resources\MediaIconHDMIRed.svg" />
+    <EmbeddedResource Include="Resources\MediaIconBlueToothSoundRed.svg" />
+    <EmbeddedResource Include="Resources\sofiapro-regular.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NursePopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Icons\MediaIconNumpadRed.png" />
+    <None Remove="Icons\MediaIconChannelListGray.png" />
+    <None Remove="Icons\MediaIconMenu.png" />
+    <None Remove="Icons\MediaIconPlay.png" />
+    <None Remove="Icons\ArrowLeftRed.png" />
+    <None Remove="Icons\ArrowRightRed.png" />
+    <None Remove="Icons\ArrowUpRed.png" />
+    <None Remove="Icons\ArrowDownRed.png" />
+    <None Remove="Icons\HDMIRed.png" />
+    <None Remove="Icons\MediaIconBlueToothSoundRed.png" />
+    <None Remove="Icons\LightSimple.png" />
+    <None Remove="Icons\OptionListen3s.png" />
+    <None Remove="Icons\OptionListen5s.png" />
+    <None Remove="Icons\OptionMicMute.png" />
+    <None Remove="Icons\LightIconSoftRed.png" />
+    <None Remove="Icons\LightIconFullRed.png" />
+    <None Remove="Icons\LightStandard.png" />
+    <None Remove="Icons\LightIconNightRed.png" />
+    <None Remove="Icons\LightIconTVRed.png" />
+    <None Remove="Icons\LightIconReadingRed.png" />
+    <None Remove="Icons\LightAdvanced.png" />
+    <None Remove="Icons\BlindBlackout.png" />
+    <None Remove="Icons\BlindSheer.png" />
+    <None Remove="Icons\BlindAllRed.png" />
+    <None Remove="Icons\BlindBlackoutRed.png" />
+    <None Remove="Icons\BlindAll.png" />
+    <None Remove="Icons\BlindSheerRed.png" />
+    <None Remove="Icons\MediaSoundMute.png" />
+    <None Remove="Icons\SideBarIconColoredTriangle.png" />
+    <None Remove="Icons\SideIconOptionColor.png" />
+    <None Remove="Icons\SideIconTemperatureColor.png" />
+    <None Remove="Icons\SideIconBlindColor.png" />
+    <None Remove="Icons\SideIconLightColor.png" />
+    <None Remove="Icons\SideIconDoorColor.png" />
+    <None Remove="Icons\SideIconMediaColor.png" />
+    <None Remove="Icons\OptionListen1s.png" />
+    <None Remove="Icons\OptionOffRed.png" />
+    <None Remove="Icons\OptionOff.png" />
+    <None Remove="Icons\ClockLow.png" />
+    <None Remove="Icons\CloclLowRed.png" />
+    <None Remove="Icons\ClockOff.png" />
+    <None Remove="Icons\ClockOffRed.png" />
+    <None Remove="Utilities\" />
+    <None Remove="Icons\SideIconNurse.png" />
+    <None Remove="Icons\SideIconNurse1.png" />
+    <None Remove="Icons\SideIconNurseColor.png" />
+    <None Remove="Icons\SideIconElevatorColor.png" />
+    <None Remove="Xamarin.FFImageLoading.Svg" />
+    <None Remove="Xamarin.FFImageLoading.Svg.Forms" />
+    <None Remove="Xamarin.FFImageLoading" />
+    <None Remove="Resources\MediaIconTV.svg" />
+    <None Remove="Resources\MediaIconHDMI.svg" />
+    <None Remove="Resources\MediaIconCable.svg" />
+    <None Remove="Resources\MediaIconCableRed.svg" />
+    <None Remove="Resources\MediaIconBlueToothSound.svg" />
+    <None Remove="Resources\MediaIconBlueToothInput.svg" />
+    <None Remove="Resources\MediaNumberButtonBackground.svg" />
+    <None Remove="Resources\MediaNumberPadBackground.svg" />
+    <None Remove="Resources\MediaIconNumpadRed.svg" />
+    <None Remove="Resources\MediaIconChannelList.svg" />
+    <None Remove="Resources\MediaIconNumpad.svg" />
+    <None Remove="Resources\MediaIconChannelListRed.svg" />
+    <None Remove="Resources\MediaPowerButton.svg" />
+    <None Remove="Resources\ArrowUpRed.svg" />
+    <None Remove="Resources\ArrowButtonBase.svg" />
+    <None Remove="Resources\ArrowDownRed.svg" />
+    <None Remove="Resources\MediaIconPlay.svg" />
+    <None Remove="Resources\MediaIconMenu.svg" />
+    <None Remove="Views\Media\" />
+    <None Remove="Resources\MediaSoundMuteAndUnmuteButton.svg" />
+    <None Remove="Resources\MediaIconTVRed.svg" />
+    <None Remove="Resources\MediaIconHDMIRed.svg" />
+    <None Remove="Resources\MediaIconBlueToothSoundRed.svg" />
+    <None Remove="Resources\sofiapro-regular.otf" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Models\DynamicPageModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Media\MediaPageMaster.xaml.cs">
+      <DependentUpon>MediaPageMaster.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Media\MediaPageNumber.xaml.cs">
+      <DependentUpon>MediaPageNumber.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Media\MediaPageChannels.xaml.cs">
+      <DependentUpon>MediaPageChannels.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Media\MediaPageArrows.xaml.cs">
+      <DependentUpon>MediaPageArrows.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Media\MediaCableLeft.xaml.cs">
+      <DependentUpon>MediaCableLeft.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Media\MediaAppleLeft.xaml.cs">
+      <DependentUpon>MediaAppleLeft.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MyPage.xaml.cs">
+      <DependentUpon>MyPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

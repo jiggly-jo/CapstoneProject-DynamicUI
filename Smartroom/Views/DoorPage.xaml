@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+             x:Class="Smartroom.Views.DoorPage">
+             
+    <ContentView.Content>
+        <Grid
+            AutomationProperties.IsInAccessibleTree="False"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="0"
+            ColumnSpacing="0"
+            x:Name="MediaGrid"
+            x:FieldModifier="public"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="112*"/>
+                <RowDefinition Height="888*"/>
+            </Grid.RowDefinitions>
+
+            <Utilities:HeadlineLabel
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="White"
+                VerticalTextAlignment="End"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                x:Name="DoorLabel"
+                Text="DOOR CONTROLS"
+                x:FieldModifier="public"/>
+
+            <Frame
+                Grid.Row="1"
+                Grid.Column="0"
+                AutomationProperties.IsInAccessibleTree="False"
+                BackgroundColor="#f8f8f8"
+                CornerRadius="60"
+                HasShadow="False"
+
+                Padding="0"
+                x:Name="ControlFrame"
+                HorizontalOptions="FillAndExpand"
+                OutlineColor="LightGray"
+                VerticalOptions="FillAndExpand">
+
+                <Grid 
+                    HorizontalOptions="FillAndExpand"
+                    AutomationProperties.IsInAccessibleTree="False"
+                    VerticalOptions="FillAndExpand">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*" />
+                        <ColumnDefinition Width="34*" />
+                        <ColumnDefinition Width="33*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="65*"/>
+                        <RowDefinition Height="35*"/>
+                    </Grid.RowDefinitions>
+
+                    <ImageButton 
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        AutomationId="DoorClose"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="11"
+                        AutomationProperties.Name="Close Door"
+                        x:Name="DoorCloseButton"
+                        Command="{Binding DoorCloseCommand}"
+                        HorizontalOptions="FillAndExpand"                        
+                        Source="{Utilities:ImageResource Smartroom.Icons.DoorIconClose.png}"
+                        VerticalOptions="FillAndExpand" />
+                    
+                    <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        x:Name="CloseLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Text="Close" />
+
+                    <ImageButton
+
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        AutomationId="DoorPartial"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="12"
+                        AutomationProperties.Name="Open Door Partially"
+                        BorderWidth="0"
+                        x:Name="DoorPartialButton"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding DoorPartialCommand}"
+                        Source="{Utilities:ImageResource Smartroom.Icons.DoorIconOpenPartially.png}"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Utilities:Sublabel
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        x:Name="PartialLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Text="Open Partially" />
+
+                    <ImageButton 
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        AutomationId="DoorOpen"
+                        x:Name="DoorOpenButton"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="13"
+                        AutomationProperties.Name="Open Door"
+                        BorderWidth="0"
+                        Command="{Binding DoorOpenCommand}"
+                        HorizontalOptions="FillAndExpand"
+                        Source="{Utilities:ImageResource Smartroom.Icons.DoorIconOpen.png}"
+                        VerticalOptions="FillAndExpand" />
+
+                    <Utilities:Sublabel                        
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        x:Name="OpenLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Text="Open" />
+
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    x:Class="Smartroom.Views.MediaPageNumber">
+    <ContentView.Content>
+        <f9p:Frame
+            AutomationProperties.IsInAccessibleTree="False"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="0"
+            BorderWidth="2"
+            BorderRadius="45"
+            BorderColor="LightGray"
+            BackgroundColor="#f8f8f8"
+            HasShadow="false"
+            x:Name="NumberFrame">
+
+            <Grid
+                ColumnSpacing="0"
+                RowSpacing="0"
+                Padding="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="33*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="26*"/>
+                    <RowDefinition Height="24*"/>
+                    <RowDefinition Height="24*"/>
+                    <RowDefinition Height="26*"/>                     
+                </Grid.RowDefinitions>
+
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="3"
+                    Grid.RowSpan="4"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    ScaleY="1.01"
+                    Source="{Utilities:ImageResource Smartroom.Icons.MediaNumberPadBackground.png}"/>
+                                           
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Channel1"
+                    AutomationId="Channel 1"                    
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    x:Name="Channel1Button">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>                                          
+
+
+                </f9p:StateButton>
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="1"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                    x:Name="Label1"/>
+
+                 <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Channel2"
+                    AutomationId="Channel 2"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    x:Name="Channel2Button">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>
+
+                </f9p:StateButton>
+
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="2"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                    x:Name="Label2"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Channel3"
+                    AutomationId="Channel 3"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    x:Name="Channel3Button">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>
+
+                </f9p:StateButton>
+
+                <Label
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="3"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                    x:Name="Label3"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Channel4"
+                    AutomationId="Channel 4"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    x:Name="Channel4Button">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>
+
+                </f9p:StateButton>
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="4"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                    x:Name="Label4"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Channel5"
+                    AutomationId="Channel 5"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    x:Name="Channel5Button">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>
+
+                </f9p:StateButton>
+
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="5"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                    x:Name="Label5"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Channel6"
+                    AutomationId="Channel 6"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    x:Name="Channel6Button">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>
+
+                </f9p:StateButton>
+
+                <Label
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="6"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                    x:Name="Label6"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Channel7"
+                    AutomationId="Channel 7"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    x:Name="Channel7Button">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>
+
+                </f9p:StateButton>
+
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="7"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                    x:Name="Label7"/>
+
+                <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Channel8"
+                    AutomationId="Channel 8"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    x:Name="Channel8Button">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>
+
+                </f9p:StateButton>
+
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="2"                    
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="8"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                    x:Name="Label8"/>
+
+                 <f9p:StateButton
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="Channel9"
+                    AutomationId="Channel 9"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    x:Name="Channel9Button">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>
+
+                 </f9p:StateButton>
+
+                 <Label
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="9"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                     x:Name="Label9"/>
+
+                 <f9p:StateButton
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    x:Name="Channel0Button"
+                    AutomationProperties.Name="Pair"
+                    AutomationId="Channel 0"
+                    x:FieldModifier="public"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="NumberClicked"
+                    AutomationProperties.IsInAccessibleTree="True">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Source="resource://Smartroom.Resources.MediaNumberButtonBackground.svg"/>
+
+                </f9p:StateButton>
+
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="3"                    
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="0"
+                    FontSize="58"
+                    FontFamily="SofiaProRegular"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    InputTransparent="True"
+                    x:Name="Label0"/>
+
+                <ffimageloadingsvg:SvgCachedImage
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    WidthRequest="100"
+                    Source="resource://Smartroom.Resources.MediaIconNumpadRed.svg"
+                    x:Name="NumberPadIcon"/>
+
+                  <f9p:StateButton
+                    Grid.Column="2"
+                    Grid.Row="3"
+                    x:Name="ChannelListIcon"
+                    AutomationProperties.Name="Pair"
+                    AutomationId="Channel 0"
+                    x:FieldModifier="public"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="ShowChannelList"
+                    AutomationProperties.IsInAccessibleTree="True">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                      WidthRequest="100"
+                        Source="resource://Smartroom.Resources.MediaIconChannelList.svg"/>
+
+                      </f9p:StateButton>
+
+         
+
+            </Grid>
+        </f9p:Frame>
+
+       
+
+    </ContentView.Content>
+</ContentView>

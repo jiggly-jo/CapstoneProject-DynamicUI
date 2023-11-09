@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Smartroom.Views.OptionsPage"
+             xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+             xmlns:Constants="clr-namespace:Smartroom.Helpers">
+    <ContentView.Content>
+        <ScrollView>
+            <Grid
+            AutomationProperties.IsInAccessibleTree="False"
+            RowSpacing="0"
+            ColumnSpacing="0"
+            x:Name="OptionsGrid">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="13*"/>
+                    <RowDefinition Height="07*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="7*"/>
+
+                </Grid.RowDefinitions>
+
+
+                <!--       <Button
+               AutomationId="TutorialButton"
+               Grid.Column="0"
+               Grid.Row="0"
+               BackgroundColor="#f8f8f8"
+               TextColor="Black"
+               BorderColor="LightGray"
+               BorderWidth="1"
+               CornerRadius="30"
+               Padding="50,10,50,10"
+               Grid.ColumnSpan="2"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               FontFamily="SofiaProRegular"
+               FontSize="30"
+               Text="Tutorial"/>  
+
+            <ImageButton
+                Grid.Column="2"
+                Grid.Row="0"
+                Scale="0.85"
+                Margin="0,32,0,0"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                Source="{local:ImageResource Smartroom.Icons.QuestionIcon.png}"/>  -->
+
+                <Utilities:HeadlineLabel
+                AutomationProperties.IsInAccessibleTree="False"
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="OPTIONS"
+                x:Name="OptionsLabel"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"/>
+
+                <Utilities:Sublabel
+                Grid.Column="0"
+                Grid.Row="1"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                x:Name="ParingLabel"
+                Text="Room Pairing"
+                AutomationProperties.IsInAccessibleTree="False"/>
+
+                <Frame
+                Grid.Column="0"
+                Grid.Row="2"
+                BackgroundColor="#f8f8f8"
+                CornerRadius="30"
+                HasShadow="False"
+                BorderColor="Gray"
+                x:Name="RoomFrame"
+                Padding="0"
+                AutomationProperties.IsInAccessibleTree="False"
+                OutlineColor="LightGray"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100*"/>
+                        </Grid.RowDefinitions>
+
+                        <Utilities:ValueLabel
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        x:Name="RoomNum"
+                        Grid.ColumnSpan="{Binding RoomSpan}"
+                        Text="{Binding RoomNum}"
+                        TextColor="{Binding RoomColor}"
+                        AutomationProperties.IsInAccessibleTree="False"/>
+
+                        <Utilities:ValueLabel
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        x:Name="RoomPin"
+                        Text="{Binding RoomPin}"
+                        AutomationProperties.IsInAccessibleTree="False"/>
+
+                    </Grid>
+                </Frame>
+
+                <Utilities:Sublabel
+                Grid.Column="0"
+                Grid.Row="3"
+                x:Name="VoiceLabel"
+                AutomationProperties.IsInAccessibleTree="False"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Text="Voice Controls"/>
+
+                <Frame
+                Grid.Column="0"
+                Grid.Row="4"
+                Padding="0"
+                BackgroundColor="#f8f8f8"
+                CornerRadius="30"
+                HasShadow="False"
+                x:Name="ControlFrame1"
+                BorderColor="Gray"
+                AutomationProperties.IsInAccessibleTree="False"
+                OutlineColor="LightGray"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                    <Grid
+                    AutomationProperties.IsInAccessibleTree="False"
+                    RowSpacing="0" 
+                    ColumnSpacing="20">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="33*"/>
+                            <ColumnDefinition Width="36*"/>
+                            <ColumnDefinition Width="30*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70*"/>
+                            <RowDefinition Height="30*"/>
+                        </Grid.RowDefinitions>
+
+                        <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Source="{Utilities:ImageResource Smartroom.Icons.OptionIconMac.png}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Mac Sam"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="SpeechToggle"
+                        x:Name="SpeechImage"
+                        TabIndex="10"/>
+
+                        <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Mac/Sam"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        x:Name="MacLabel"
+                        AutomationProperties.IsInAccessibleTree="False"/>
+
+                        <ImageButton
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        TabIndex="11"
+                        Source="{Binding OptionListeningIcon}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Listening Time"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="CountdownToggle"
+                        x:Name="CountdownImage"/>
+
+                        <Utilities:Sublabel
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="Listening Time"
+                        x:Name="ListeningLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        AutomationProperties.IsInAccessibleTree="False"/>
+
+                        <ImageButton
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        TabIndex="12"
+                        Source="{Utilities:ImageResource Smartroom.Icons.OptionIconSamMac.png}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Mute Unmute"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="ListeningToggle"
+                        x:Name="MuteImage"/>
+
+                        <Utilities:Sublabel
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Text="Mute"
+                        x:Name="MuteLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        AutomationProperties.IsInAccessibleTree="False"/>
+
+                    </Grid>
+                </Frame>
+
+                <Utilities:Sublabel
+                Grid.Column="0"
+                Grid.Row="5"
+                AutomationProperties.IsInAccessibleTree="False"
+                Text="TV Info Board Brightness"
+                x:Name="InfoLabel"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"/>
+
+                <Frame
+                Grid.Column="0"
+                Grid.Row="6"
+                Padding="0"
+                HasShadow="False"
+                CornerRadius="30"
+                x:Name="ControlFrame2"
+                OutlineColor="LightGray"
+                AutomationProperties.IsInAccessibleTree="False"
+                BackgroundColor="#f8f8f8"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand">
+
+                    <Grid
+                    AutomationProperties.IsInAccessibleTree="False"
+                    RowSpacing="0" 
+                    ColumnSpacing="20">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="33*"/>
+                            <ColumnDefinition Width="33*"/>
+                            <ColumnDefinition Width="33*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70*"/>
+                            <RowDefinition Height="30*"/>
+                        </Grid.RowDefinitions>
+
+                        <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        TabIndex="13"
+                        Source="{Utilities:ImageResource Smartroom.Icons.OptionOff.png}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="On Off"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="DisplayOff"
+                        x:Name="BoardIconOff"/>
+
+                        <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="On/Off"
+                        x:Name="OnOffLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        AutomationProperties.IsInAccessibleTree="False"/>
+
+                        <ImageButton
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        TabIndex="13"
+                        Source="{Binding DisplayDim}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Dim"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="DisplayLow"
+                        x:Name="BoardIconSoft"/>
+
+                        <Utilities:Sublabel
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="Dim"
+                        TextColor="{Binding DimColor}"
+                        x:Name="DimLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        AutomationProperties.IsInAccessibleTree="False"/>
+
+                        <ImageButton
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        TabIndex="14"
+                        Source="{Binding DisplayBright}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Bright"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="DisplayOn"
+                        x:Name="BoardIconFull"/>
+
+                        <Utilities:Sublabel
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        x:Name="BrightLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Text="Bright"
+                        TextColor="{Binding BrightColor}"
+                        AutomationProperties.IsInAccessibleTree="False"/>
+
+                    </Grid>
+                </Frame>
+
+                <!--#region Clock Control-->
+                <Utilities:Sublabel
+                Grid.Column="0"
+                Grid.Row="7"
+                AutomationProperties.IsInAccessibleTree="False"
+                Text="Clock Brightness"
+                x:Name="ClockBrightnessLabel"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"/>
+
+                <Frame
+                Grid.Column="0"
+                Grid.Row="8"
+                Padding="0"
+                HasShadow="False"
+                CornerRadius="30"
+                x:Name="ControlFrame3"
+                OutlineColor="LightGray"
+                AutomationProperties.IsInAccessibleTree="False"
+                BackgroundColor="#f8f8f8"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand">
+
+                    <Grid
+                    AutomationProperties.IsInAccessibleTree="False"
+                    RowSpacing="0" 
+                    ColumnSpacing="0">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70*"/>
+                            <RowDefinition Height="30*"/>
+                        </Grid.RowDefinitions>
+
+                        <ImageButton
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Padding="30"
+                        TabIndex="13"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ClockOff.png}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Clock Off"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="ClockOff"
+                        x:Name="ClockOffIcon">
+                            <ImageButton.Triggers>
+                                <DataTrigger TargetType="ImageButton" Binding="{Binding ClockBrightness}" Value="OFF">
+                                    <Setter Property="Source" Value="{Utilities:ImageResource Smartroom.Icons.ClockOffRed.png}" />
+                                </DataTrigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+
+                        <Utilities:Sublabel
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Off"
+                        TextColor="Black"
+                        x:Name="ClockOffLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        AutomationProperties.IsInAccessibleTree="False">
+                            <Utilities:Sublabel.Triggers>
+                                <DataTrigger TargetType="Utilities:Sublabel" Binding="{Binding ClockBrightness}" Value="OFF">
+                                    <Setter Property="TextColor" Value="{x:Static Constants:Constants.UofURed}" />
+                                </DataTrigger>
+                            </Utilities:Sublabel.Triggers>
+                        </Utilities:Sublabel>
+
+                        <ImageButton
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        TabIndex="13"
+                        Source="{Utilities:ImageResource Smartroom.Icons.ClockLow.png}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Clock Low"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="ClockLow"
+                        x:Name="ClockLowIcon">
+                            <ImageButton.Triggers>
+                                <DataTrigger TargetType="ImageButton" Binding="{Binding ClockBrightness}" Value="LOW">
+                                    <Setter Property="Source" Value="{Utilities:ImageResource Smartroom.Icons.ClockLowRed.png}" />
+                                </DataTrigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+
+                        <Utilities:Sublabel
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="Low"
+                        TextColor="Black"
+                        x:Name="ClockLowLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        AutomationProperties.IsInAccessibleTree="False">
+                            <Utilities:Sublabel.Triggers>
+                                <DataTrigger TargetType="Utilities:Sublabel" Binding="{Binding ClockBrightness}" Value="LOW">
+                                    <Setter Property="TextColor" Value="{x:Static Constants:Constants.UofURed}" />
+                                </DataTrigger>
+                            </Utilities:Sublabel.Triggers>
+                        </Utilities:Sublabel>
+
+                        <ImageButton
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        TabIndex="13"
+                        Source="{Utilities:ImageResource Smartroom.Icons.LightIconSoft.png}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Clock Medium"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="ClockMedium"
+                        x:Name="ClockMediumIcon">
+                            <ImageButton.Triggers>
+                                <DataTrigger TargetType="ImageButton" Binding="{Binding ClockBrightness}" Value="MEDIUM">
+                                    <Setter Property="Source" Value="{Utilities:ImageResource Smartroom.Icons.LightIconSoftRed.png}" />
+                                </DataTrigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+
+                        <Utilities:Sublabel
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Text="Medium"
+                        TextColor="Black"
+                        x:Name="ClockMediumLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        AutomationProperties.IsInAccessibleTree="False">
+                            <Utilities:Sublabel.Triggers>
+                                <DataTrigger TargetType="Utilities:Sublabel" Binding="{Binding ClockBrightness}" Value="MEDIUM">
+                                    <Setter Property="TextColor" Value="{x:Static Constants:Constants.UofURed}" />
+                                </DataTrigger>
+                            </Utilities:Sublabel.Triggers>
+                        </Utilities:Sublabel>
+
+                        <ImageButton
+                        Grid.Column="3"
+                        Grid.Row="0"
+                        TabIndex="14"
+                        Source="{Utilities:ImageResource Smartroom.Icons.LightIconFull.png}"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="Clock High"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Pressed="ButtonPressed"
+                        Released="ButtonReleased"
+                        Clicked="ClockHigh"
+                        x:Name="ClockHighIcon">
+                            <ImageButton.Triggers>
+                                <DataTrigger TargetType="ImageButton" Binding="{Binding ClockBrightness}" Value="HIGH">
+                                    <Setter Property="Source" Value="{Utilities:ImageResource Smartroom.Icons.LightIconFullRed.png}" />
+                                </DataTrigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+
+                        <Utilities:Sublabel
+                        Grid.Column="3"
+                        Grid.Row="1"
+                        Text="High"
+                        TextColor="Black"
+                        x:Name="ClockHighLabel"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        AutomationProperties.IsInAccessibleTree="False">
+                            <Utilities:Sublabel.Triggers>
+                                <DataTrigger TargetType="Utilities:Sublabel" Binding="{Binding ClockBrightness}" Value="HIGH">
+                                    <Setter Property="TextColor" Value="{x:Static Constants:Constants.UofURed}" />
+                                </DataTrigger>
+                            </Utilities:Sublabel.Triggers>
+                        </Utilities:Sublabel>
+
+                    </Grid>
+                </Frame>
+               
+                <Frame
+                Grid.Column="0"
+                Grid.Row="10">
+                    <Button
+                        FontSize="35"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center"
+                        Clicked="OnSwapButtonClicked"
+                        x:Name="SwapSort"/>
+                </Frame>
+                 <Frame
+                Grid.Column="0"
+                Grid.Row="11">
+                    <Button
+                        FontSize="35"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center"
+                        Clicked="SwapButtonSize"
+                        x:Name="LargeSmall"/>
+                </Frame>
+                 <Frame
+                Grid.Column="0"
+                Grid.Row="12">
+                        <Label > Enter a room number </Label>
+                </Frame>
+                 <Frame
+                Grid.Column="0"
+                Grid.Row="13">
+                        <Entry
+                            Placeholder="Enter your Roomnumber"
+                            Keyboard="Telephone"
+                            TextChanged="UpdateRoomNumber"
+                            x:Name="roomNumEntry"
+                           />
+                </Frame>
+                 
+                <!--#endregion Clock Control-->
+            </Grid>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

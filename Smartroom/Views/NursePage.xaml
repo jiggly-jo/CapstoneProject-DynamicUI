@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:Utilities="clr-namespace:Smartroom.Utilities"
+             xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch"             
+             x:Class="Smartroom.Views.NursePage">
+    <ContentView.Content>
+        <Frame
+            Grid.Row="1"
+            Grid.Column="0"
+            AutomationProperties.IsInAccessibleTree="False"
+            BackgroundColor="#f8f8f8"
+            CornerRadius="60"
+            HasShadow="False"
+            Margin="50,50,50,45"
+            x:Name="ControlFrame"
+            HorizontalOptions="FillAndExpand"
+            OutlineColor="LightGray"
+            VerticalOptions="FillAndExpand">
+
+            <StackLayout
+                Orientation="Vertical"
+                Spacing="20"
+                Margin="75,50,75,0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                <Utilities:HeadlineLabel
+                Text="NURSE REQUEST"
+                x:Name="OptionsLabel"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"/>
+
+                <!--#region Nurse Request Buttons-->
+                <Forms9Patch:Button
+                    BorderRadius="30"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    IsEnabled="{Binding NurseLock}"
+                    Text="Water"
+                    TextColor="Black"
+                    FontSize="34"
+                    FontFamily="Smartroom.Resources.sofiapro-regular.otf"
+                    BorderWidth="1"
+                    x:Name="WaterRequestButton"
+                    BorderColor="LightGray"
+                    BackgroundColor="White"
+                    Clicked="WaterRequestButton_Clicked"/>
+
+                <Forms9Patch:Button
+                    BorderRadius="30"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    IsEnabled="{Binding NurseLock}"
+                    Text="Pain"
+                    TextColor="Black"
+                    FontSize="34"
+                    FontFamily="Smartroom.Resources.sofiapro-regular.otf"
+                    BorderWidth="1"
+                    x:Name="PainRequestButton"
+                    BorderColor="LightGray"
+                    BackgroundColor="White"
+                    Clicked="MedsRequestButton_Clicked"/>
+
+                <Forms9Patch:Button
+                    BorderRadius="30"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    IsEnabled="{Binding NurseLock}"
+                    Text="Bathroom"
+                    TextColor="Black"
+                    FontSize="34"
+                    FontFamily="Smartroom.Resources.sofiapro-regular.otf"
+                    BorderWidth="1"
+                    x:Name="BathroomRequestButton"
+                    BorderColor="LightGray"
+                    BackgroundColor="White"
+                    Clicked="BathroomRequestButton_Clicked"/>
+
+                <Forms9Patch:Button
+                    BorderRadius="30"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Text="Catheter"
+                    TextColor="Black"
+                    IsEnabled="{Binding NurseLock}"
+                    FontSize="34"
+                    FontFamily="Smartroom.Resources.sofiapro-regular.otf"
+                    BorderWidth="1"
+                    x:Name="CatherRequestButton"
+                    BorderColor="LightGray"
+                    BackgroundColor="White"
+                    Clicked="CatheterRequestButton_Clicked"/>
+                <!--#endregion request buttons-->
+
+                <Utilities:SidebarLabel
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="{Binding NurseSuccessColor}"
+                    FontSize="30"
+                    FontFamily="SofiaProRegular"
+                    x:Name="NurseLabel"
+                    Text="{Binding NurseText}"/> 
+
+            </StackLayout>
+
+        </Frame>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 195.15 107.75">
+<metadata>
+<vectornator:setting key="DimensionsVisible" value="1"/>
+<vectornator:setting key="PencilOnly" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="OutlineMode" value="0"/>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="doHistoryDisabled" value="0"/>
+<vectornator:setting key="TimeLapseWatermarkDisabled" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="Units" value="Points"/>
+<vectornator:setting key="IsolateActiveLayer" value="0"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+</metadata>
+<defs/>
+<g id="Layer 2" vectornator:layerName="Layer 2">
+<path d="M97.46+94.7L144.85+45.38L183.94+4.66C184.848+3.68382+185.809+2.75906+186.82+1.89C189.28-0.110001+192.47-1+194.26+1.76C195.431+4.10467+195.45+6.85984+194.31+9.22C192.31+12.57+189.05+15.17+186.31+18.06C158.75+46.7733+131.187+75.4767+103.62+104.17C99.02+108.97+96.31+108.94+91.62+104.07C62.54+73.8033+33.4733+43.5333+4.42+13.26C2.93+11.7+0.86+10.22+0.34+8.34C-0.24+6.28-0.14+2.94+1.14+1.76C2.42+0.58+5.69+0.85+7.76+1.52C9.47+2.06+10.76+4.06+12.13+5.52C39.2433+33.72+66.35+61.9333+93.45+90.16C94.7+91.46+95.85+92.87+97.46+94.7Z" opacity="1" fill="#ac162c"/>
+</g>
+</svg>

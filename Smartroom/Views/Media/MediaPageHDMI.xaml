@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Smartroom.Views.MediaPageHDMI"
+    xmlns:Utilities="clr-namespace:Smartroom.Utilities" xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch" xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+    <ContentView.Content>
+
+        <Frame
+                Margin="10,0,10,0"
+                Grid.Column="0"
+                Grid.Row="2"
+                BackgroundColor="#f8f8f8"
+                CornerRadius="30"
+                HasShadow="False"
+                BorderColor="Gray"
+                x:Name="RoomFrame"
+                Padding="20"
+                AutomationProperties.IsInAccessibleTree="False"
+                OutlineColor="LightGray"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+            <StackLayout
+                Orientation="Vertical"
+                Spacing="10"
+                Padding="10,0,10,0"
+                VerticalOptions="StartAndExpand">
+
+                <Utilities:ValueLabel
+                    Margin="0,20,0,50"
+                    x:Name="PairingPinLabel"
+                    Text="Bedside HDMI"
+                    LineBreakMode="NoWrap"
+                    HorizontalOptions="Center"
+                    TextColor="{Binding RoomColor}"
+                    AutomationProperties.IsInAccessibleTree="False"/>
+
+                <Label VerticalOptions="CenterAndExpand"
+                       FontSize="Body">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="This input is for watching content on the TV from a device plugged into the HDMI port on the wall by the bed.&#10;" />
+                            <Span Text="To use this input, plug your device (XBOX, DVD, computer, etc) into the wall port using an HDMI cable.&#10;" />
+                            <Span Text="Once plugged in, press this input to watch content from the device on the TV screen.&#10;&#10;" />
+                            <Span Text="Your device's volume and the TV power can be controlled on this page as well using the buttons on this page.&#10;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>
